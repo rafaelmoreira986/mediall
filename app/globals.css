@@ -1,0 +1,190 @@
+/* Fix bg-section positioning inside sections */
+section > .bg-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+section > .bg-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ensure sections have relative positioning for bg-section */
+section {
+  position: relative;
+}
+
+/* Fix img-card bg-section */
+.img-card {
+  position: relative;
+}
+
+.img-card > .bg-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.img-card > .bg-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fix testimonial thumb images */
+.testimonial-thumb .thumb-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-thumb .thumb-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix clients row display */
+.clients-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.clients-row .client img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Swiper overrides to work with existing theme */
+.swiper-button-next,
+.swiper-button-prev {
+  color: inherit;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-primary, #13c5dd);
+}
+
+/* Ensure custom cursor stays visible above all sections */
+.cursor {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 99999 !important;
+  pointer-events: none;
+}
+
+.cursor .cursor__inner {
+  z-index: 99999 !important;
+  position: absolute;
+}
+
+/* Ensure testimonial section has proper background */
+.testimonial.testimonial-3 {
+  position: relative;
+}
+
+.testimonial.testimonial-3 > .bg-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.testimonial.testimonial-3 > .bg-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ensure content is visible over bg-overlay */
+.testimonial.testimonial-3 .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix testimonial thumbs layout */
+.testimonial-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.testimonial-thumbs .testimonial-thumb {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Fix video bg-section */
+.video > .bg-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.video > .bg-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fix hero sections */
+.hero > .bg-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hero > .bg-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .container,
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix CTA sections */
+.cta {
+  position: relative;
+}
+
+.cta > .bg-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.cta > .bg-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta > .row {
+  position: relative;
+  z-index: 1;
+}

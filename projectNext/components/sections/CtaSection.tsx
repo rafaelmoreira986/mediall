@@ -1,38 +1,29 @@
 "use client";
-import Link from "next/link";
 
 const processes = [
   {
     number: "01.",
-    icon: "flaticon-023-medical-history",
-    title: "fill our medical application",
-    desc: "Medisch offers free or low-cost health coverage for adults.",
-    linkText: "doctors timetable",
-    linkHref: "/doctors-timetable",
+    icon: "flaticon-009-pulse",
+    title: "Missão",
+    desc: "Prestar serviços nas diversas áreas da medicina visando atender às necessidades e valorizando os profissionais de saúde, pacientes e hospitais de todo o Brasil, com qualidade, competência e confiabilidade.",
   },
   {
     number: "02.",
-    icon: "flaticon-043-cardiogram",
-    title: "Review Your Family History",
-    desc: "Health exams help find problems with early chances which helps.",
-    linkText: "Start A Check Up",
-    linkHref: "#",
+    icon: "flaticon-010-ophtalmology",
+    title: "Visão",
+    desc: "Ser a empresa líder em atendimento de saúde hospitalar no Brasil, reconhecidamente séria e confiável, destacando-se pela equipe capacitada e comprometida com a qualidade de atendimento, valorizando e solucionando as necessidades dos pacientes.",
   },
   {
     number: "03.",
-    icon: "flaticon-027-medical-report",
-    title: "Choose Between Our Programs",
-    desc: "We have protocols to protect our patients to provide necessary care.",
-    linkText: "explore programs",
-    linkHref: "#",
+    icon: "flaticon-044-caduceus",
+    title: "Valores",
+    desc: "Ética, transparência, credibilidade, competência, comprometimento, profissionalismo e atenção ao bem-estar de pacientes e colaboradores.",
   },
   {
     number: "04.",
     icon: ".flaticon-021-medical-1",
-    title: "Introduce To Qualified Doctors",
-    desc: "Our administration and support staff all have exceptional people skills",
-    linkText: "meet our doctors",
-    linkHref: "/page-appointments",
+    title: "Mediall Brasil",
+    desc: "Na busca constante pela excelência, nossa empresa de gestão em saúde fundamenta-se na integridade, garantindo uma administração ética e transparente.",
   },
 ];
 
@@ -43,20 +34,20 @@ export default function CtaSection() {
         <div className="heading heading-6">
           <div className="row">
             <div className="col-12 col-lg-5">
-              <p className="heading-subtitle">Caring For The Health Of You And Your Family.</p>
+              <p className="heading-subtitle">moldando futuros saudáveis e sustentáveis.</p>
             </div>
           </div>
           <div className="row">
             <div className="col-12 col-lg-5">
-              <h2 className="heading-title">We Provide All Aspects Of Medical Practice For Your Whole Family!</h2>
+              <h2 className="heading-title">Desde 2018 em Gestão de Negócios em Saúde</h2>
             </div>
             <div className="col-12 col-lg-6 offset-lg-1">
               <div className="prief-set">
-                <p>We pride ourselves on providing the best transport and shipping services available allover the world. Our skilled personnal and processing software, combined with decades of experience! Through integrated supply chain solutions, Equita drives sustainable competitive advantages to some of Australia&apos;s largest companies.</p>
+                <p>Alcançamos excelência em gestão em saúde, moldando futuros saudáveis e sustentáveis, através da análise criteriosa de índices, orientando nossas práticas para garantir resultados superiores em bem-estar e eficiência.</p>
                 <ul className="list-unstyled advantages-list">
-                  <li><i className="fas fa-check"></i> Quality Control System</li>
-                  <li><i className="fas fa-check"></i> Unrivalled workmanship</li>
-                  <li><i className="fas fa-check"></i> 100% Satisfaction Guarantee</li>
+                  <li><i className="fas fa-check"></i> Ética</li>
+                  <li><i className="fas fa-check"></i> Transparência</li>
+                  <li><i className="fas fa-check"></i> Integridade</li>
                 </ul>
               </div>
             </div>
@@ -74,10 +65,6 @@ export default function CtaSection() {
                   <div className="process-content">
                     <h5>{proc.title}</h5>
                     <p>{proc.desc}</p>
-                    <Link className="btn-line btn-line-before btn-line-inversed" href={proc.linkHref}>
-                      <span className="line"><span></span></span>
-                      <span>{proc.linkText}</span>
-                    </Link>
                   </div>
                 </div>
               </div>

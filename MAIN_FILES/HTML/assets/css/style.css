@@ -4856,7 +4856,7 @@ ul.dropdown-menu > li.has-dropdown > a:before {
     font-family: var(--global--font-body);
     color: var(--global--color-body);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 27px;
     margin-bottom: 0; }
   .heading .paragraph {

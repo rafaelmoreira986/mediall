@@ -10971,7 +10971,7 @@ ul.dropdown-menu > li.has-dropdown > a:before {
             height: 42px;
             background-color: #1aadcd;
             color: var(--global--color-white);
-            border-radius: 8px 8px 0 8px;
+            border-radius: 4px 4px 0 4px;
             font-size: 16px;
             margin-right: 10px; }
       .features-bar .features-holder .feature-panel.feature-timetable {

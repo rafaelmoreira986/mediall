@@ -188,3 +188,78 @@ section {
   position: relative;
   z-index: 1;
 }
+
+/* Feature panels – compact by default, grow down on hover */
+.features .feature-panel-holder {
+  padding-top: 0 !important;
+  transition: none !important;
+}
+.features .feature-panel-holder:hover {
+  padding-top: 0 !important;
+}
+.features .feature-panel-holder .feature-panel {
+  transition: background-color 1.4s ease !important;
+}
+.features .feature-panel-holder .feature-panel .feature-content h4 {
+  min-height: 4.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.features .feature-panel-holder .feature-panel .feature-content p {
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 1.4s cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 1.2s ease 0.2s,
+              visibility 1.2s ease 0.2s,
+              margin 1.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.features .feature-panel-holder:hover .feature-panel .feature-content p {
+  max-height: 200px;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.features .feature-panel-holder .feature-panel a {
+  margin-top: 8px !important;
+  transition: all 1.4s ease !important;
+}
+.features .features-holder {
+  align-items: start;
+}
+
+/* Processes – equal width & height panels */
+.processes > .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.processes > .row > [class*="col-"] {
+  display: flex;
+}
+
+.processes .process-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.processes .process-panel .process-body .process-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.processes .process-panel .process-body .process-content p {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.processes .process-panel .process-body .process-content a {
+  display: none;
+}

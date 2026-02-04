@@ -72,7 +72,7 @@ export default function MedicalServicesSection() {
                         <span className="line">
                           <span></span>
                         </span>
-                        <span>read more</span>
+                        <span>Saiba mais</span>
                       </Link>
                     </div>
                   </div>

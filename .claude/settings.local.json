@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(npx next build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nProjeto Mediall Next.js com sistema de compliance\n\n- Site institucional Mediall Brasil com tema médico\n- Sistema de compliance: landing page, formulário de denúncia, dashboard administrativo, consulta de protocolo\n- Layout independente para área de compliance \\(sidebar + topbar\\)\n- Dados mock para demonstração\nEOF\n\\)\")"
+    ]
+  }
+}

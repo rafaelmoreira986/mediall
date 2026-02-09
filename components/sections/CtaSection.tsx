@@ -34,16 +34,16 @@ export default function CtaSection() {
         <div className="heading heading-6">
           <div className="row">
             <div className="col-12 col-lg-5">
-              <p className="heading-subtitle">moldando futuros saudáveis e sustentáveis.</p>
+              <p className="heading-subtitle">Nosso propósito vai além da gestão</p>
             </div>
           </div>
           <div className="row">
             <div className="col-12 col-lg-5">
-              <h2 className="heading-title">Desde 2018 em Gestão de Negócios em Saúde</h2>
+              <h2 className="heading-title">Transformando a realidade da saúde em todo o Brasil</h2>
             </div>
             <div className="col-12 col-lg-6 offset-lg-1">
               <div className="prief-set">
-                <p>Alcançamos excelência em gestão em saúde, moldando futuros saudáveis e sustentáveis, através da análise criteriosa de índices, orientando nossas práticas para garantir resultados superiores em bem-estar e eficiência.</p>
+                <p>Desde o início, buscamos fornecer soluções médicas que vão da organização de plantões à gestão plena de centros hospitalares. Diante das demandas crescentes, expandimos nossa atuação e hoje levamos governança corporativa e atendimento de excelência a unidades públicas e privadas.</p>
                 <ul className="list-unstyled advantages-list">
                   <li><i className="fas fa-check"></i> Ética</li>
                   <li><i className="fas fa-check"></i> Transparência</li>

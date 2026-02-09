@@ -13,27 +13,18 @@ const featurePanels = [
 export default function FeaturesSection() {
   return (
     <section className="features features-2 bg-parallax bg-section" id="features-2" style={{ backgroundImage: "url(/assets/images/mediall/banner.jpg)", position: "relative" }}>
-      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: 0 }} />
+      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0, 0, 0, 0.81)", zIndex: 0 }} />
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="heading heading-14 heading-light">
-          <div className="row">
-            <div className="col-12 col-lg-5">
-              <p className="heading-subtitle">Mais de 9 anos em Gestão de Negócios em Saúde</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12 col-lg-5">
-              <h2 style={{ color: 'white', fontSize: '70px', fontWeight: 'bold' }}>Nossos serviços</h2>
-
-            </div>
-            <div className="col-12 col-lg-6 offset-lg-1">
-              <p className="paragraph">A Mediall Brasil é reconhecida como líder e referência em gestão de saúde. Fundada por médicos e especializada no atendimento a unidades de saúde, a empresa concentra-se na gestão multiassistencial e valoriza a interdisciplinaridade.</p>
-              <p className="heading-desc">Comprometemo-nos com padrões excepcionais, garantindo que cada intervenção e serviço contribua para o bem-estar dos pacientes.</p>
-              <div className="signature-block">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-8">
+              <p className="heading-subtitle" style={{ textAlign: "center" }}>Moldando futuros saudáveis e sustentáveis</p>
+              <h2 style={{ color: 'white', fontSize: '70px', fontWeight: 'bold', textAlign: 'center' }}>Nossos serviços</h2>
+              <p className="paragraph text--just">Ao longo de nossa trajetória, ouvimos histórias repletas de superação e aprendemos que estender a mão faz toda a diferença na recuperação de quem precisa. Cada solução que desenvolvemos nasce dessa vivência, unindo conhecimento técnico à sensibilidade humana para transformar a realidade da saúde no Brasil.</p>
+               <div className="signature-block" style={{ textAlign: "center" }}>
                 <a className="btn btn--primary btn--inversed btn-line btn-line-after" href="#">
                   <span>Todos serviços</span><span className="line"><span></span></span>
                 </a>
-                 
               </div>
             </div>
           </div>

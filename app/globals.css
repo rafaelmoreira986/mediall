@@ -1,3 +1,8 @@
+/* Restore default cursor (override theme's cursor:none) */
+body {
+  cursor: auto !important;
+}
+
 /* Fix bg-section positioning inside sections */
 section > .bg-section {
   position: absolute;

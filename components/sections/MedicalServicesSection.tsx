@@ -3,26 +3,23 @@ import Link from "next/link";
 const services = [
   {
     icon: "flaticon-046-blood-pressure",
-    title: "Negócios em Saúde a Nível Nacional",
+    title: "Negócios em Saúde",
     description:
-      `Como empresa líder em gestão em saúde a nível nacional, estamos comprometidos em impulsionar a excelência e eficiência nos serviços de saúde em todo o país.  
-      Trabalhamos incansavelmente para desenvolver soluções personalizadas que atendam às necessidades únicas de nossos clientes, contribuindo assim para o avanço do setor de Negócios em Saúde em escala nacional.`,
+      `Desde 2018, a Mediall Brasil apresenta soluções inovadoras aos seus clientes, abrangendo Gerenciamento de Unidades de Saúde, Gestão Médica e Multiassistencial, Monitoramento de Plantão Médico e Consultoria Especializada. Com perspicácia empreendedora, adaptamo-nos às demandas do mercado e criamos produtos sob medida para cada necessidade.`,
     link: "/services",
   },
   {
     icon: "flaticon-029-cardiogram-1",
     title: "Segurança",
     description:
-      `Comprometemo-nos a fornecer soluções que garantam a proteção e o bem-estar dos pacientes, profissionais de saúde e comunidades em geral. A segurança é a base de nossos serviços, desde a gestão eficiente de 
-      informações confidenciais até a implementação de práticas inovadoras para garantir a integridade dos processos de saúde.`,
+      `Por meio de uma gestão profissional humanizada, proporcionamos a todos um ambiente seguro e confiável. Nossos olhos estão atentos tanto aos profissionais de saúde, que dedicam o melhor de si, quanto aos pacientes, que demandam gratidão e cuidado. A segurança e a confiança são os pilares que sustentam cada decisão que tomamos.`,
     link: "/services",
   },
   {
     icon: "flaticon-018-medical-2",
     title: "Responsabilidade",
     description:
-      `Nossa responsabilidade estende-se a garantir a eficiência operacional, a qualidade dos serviços prestados e o respeito pelos padrões éticos mais elevados. Estamos conscientes do impacto que nossas decisões 
-      têm na vida das pessoas e, por isso, estamos empenhados em promover práticas responsáveis que contribuam para um sistema de saúde mais equitativo, acessível e sustentável.`,
+      `Os esforços da Mediall Brasil e o reconhecimento como empresa séria e confiável fundamentam-se nos valores, ética e comprometimento com o bem mais valioso que possuímos: a SAÚDE. Estamos convictos de que é possível transformar qualquer hospital, público ou privado, em uma instituição de ponta, esteja onde estiver.`,
     link: "/services",
   },
 ];
@@ -38,10 +35,10 @@ export default function MedicalServicesSection() {
           <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
             <div className="heading heading-7 text--center">
               <p className="heading-subtitle">
-                The Best Medical And General Practice Care!
+                Mais de 9 anos em Gestão de Negócios em Saúde
               </p>
               <h2 className="heading-title">
-                Providing Medical Care For The Sickest In Community.
+                Uma historia de Compromisso, Cuidados e Desenvolvimento na Saúde
               </h2>
             </div>
           </div>
@@ -56,12 +53,12 @@ export default function MedicalServicesSection() {
                     <div className="service-icon">
                       <i className={service.icon}></i>
                     </div>
-                    <div className="service-title">
+                    <div className="service-title" style={{ textAlign: "center" }}>
                       <h4>
                         <Link href={service.link}>{service.title}</Link>
                       </h4>
                     </div>
-                    <div className="service-desc" style={{ flex: 1 }}>
+                    <div className="service-desc text--just" style={{ flex: 1 }}>
                       <p>{service.description}</p>
                     </div>
                     <div className="service-more">
@@ -80,17 +77,6 @@ export default function MedicalServicesSection() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="row">
-          <div className="col-12">
-            <div className="more-services">
-              <p>
-                Delivering tomorrow&apos;s health care for your family.{" "}
-                <Link href="/doctors-timetable">view doctors&apos; timetable</Link>
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

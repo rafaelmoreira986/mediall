@@ -7,6 +7,7 @@ import FeaturesSection from "@/components/sections/FeaturesSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import TeamCarousel from "@/components/sections/TeamCarousel";
 import CtaSection from "@/components/sections/CtaSection";
+import HospitalUnitsSection from "@/components/sections/HospitalUnitsSection";
 import DonationsSection from "@/components/sections/DonationsSection";
 import BlogCarousel from "@/components/sections/BlogCarousel";
 
@@ -15,15 +16,18 @@ export default function HomePage() {
     <>
       <HeroSlider />
       <FeaturesBar />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <MedicalServicesSection />
       <DepartmentsSection />
-      <FeaturesSection />
-      <TestimonialSection />
-      <TeamCarousel />
       <CtaSection />
+      <HospitalUnitsSection />
+      <FeaturesSection />
+      {/* <TestimonialSection />
+      <TeamCarousel />
+      
+      
       <DonationsSection />
-      <BlogCarousel />
+      <BlogCarousel /> */}
     </>
   );
 }

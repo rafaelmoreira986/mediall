@@ -29,7 +29,7 @@ export default function DepartmentsSection() {
         <div className="row">
           <div className="col-12 col-lg-6 offset-lg-3">
             <div className="heading heading-12 heading-13 text-center">
-              <p className="heading-subtitle">the best medical and general practice care!</p>
+              <p className="heading-subtitle">Nossos Pilares Fundamentais da Gestão em Saúde!</p>
               <h2 className="heading-title">providing medical care for stickest in our community.</h2>
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function DepartmentsSection() {
                     <div className="department-title">
                       <h4><Link href="/page-departments">{dept.title}</Link></h4>
                     </div>
-                    <div className="department-desc">
+                    <div className="department-desc text--just">
                       <p>{dept.desc}</p>
                     </div>
                     <ul className="department-list list-unstyled">
@@ -67,12 +67,10 @@ export default function DepartmentsSection() {
           ))}
         </div>
         <div className="departments-action">
-          <div className="row">
-            <div className="col-12 col-lg-5">
-              <p>Today hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes for all.</p>
-            </div>
-            <div className="col-12 col-lg-5 offset-lg-2">
-              <div className="doctor-action">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-8" style={{ textAlign: "center" }}>
+              <p className="text--just">Today hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes for all.</p>
+              <div className="doctor-action" style={{ justifyContent: "center" }}>
                 <Link className="btn btn--secondary btn-line btn-line-after" href="/page-appointments">
                   <span>make appointment</span><span className="line"><span></span></span>
                 </Link>

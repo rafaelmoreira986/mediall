@@ -13,7 +13,7 @@ export default function FeaturesBar() {
                   <i className="flaticon-022-medical"></i>
                   <h5 style={{ textAlign: "center" }}>Secretaria geral</h5>
                 </div>
-                <p>Please feel welcome to contact our staff with any general or medical enquiry call us</p>
+                <p style={{ textAlign: "justify" }}>Para obter mais informações sobre nossa empresa entre em contato com a nossa matriz:</p>
                 <a href="tel:3088-1706" style={{ fontSize: "16px", display: "flex", alignItems: "center", gap: "6px" }}><span className="fas fa-phone-alt" style={{ fontSize: "12px" }}></span>62 3088-1706</a>
               </div>
             </div>
@@ -25,7 +25,7 @@ export default function FeaturesBar() {
                   <i className="flaticon-027-medical-report"></i>
                   <h5 style={{ textAlign: "center" }}>Gestão de contratos</h5>
                 </div>
-                <p>Se você é fornecedor e deseja falar com alguém da Mediall Brasil, entre em contato:</p>
+                <p style={{ textAlign: "justify" }}>Se você é fornecedor e deseja falar com alguém da Mediall Brasil, entre em contato:</p>
                 <a href="mailto:analista.contratos@mediallbrasil.med.br" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                   <span className="fas fa-envelope"></span> Enviar e-mail
                 </a>
@@ -78,14 +78,12 @@ export default function FeaturesBar() {
           </div>
         </div>
         <div className="heading heading-15">
-          <div className="row">
-            <div className="col-12 col-lg-5">
-              <h2 className="heading-title">A Mediall Brasil é reconhecida como líder e referência em gestão de saúde.</h2>
-            </div>
-            <div className="col-12 col-lg-6 offset-lg-1">
-               <h1 className="paragraph"> Além de gerir unidades de saúde públicas e privadas, nos empenhamos em garantir uma gestão unificada e personalizada</h1>
-               <p className="heading-desc">Fundada por médicos e especializada no atendimento a unidades de saúde, a empresa concentra-se na gestão multiassistencial e valoriza a interdisciplinaridade, contando com profissionais de diversas especialidades em sua equipe. Comprometida com o bem-estar da sociedade, a Mediall está constantemente em busca de soluções que aprimorem as decisões dos gestores da área.</p>
-              <div className="actions-holder">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-8">
+              <h2 className="heading-title" style={{ textAlign: "center" }}>A Mediall Brasil é reconhecida como líder e referência em gestão de saúde.</h2>
+              <h3 className="paragraph" style={{ textAlign: "center" }}>Além de gerir unidades de saúde públicas e privadas, nos empenhamos em garantir uma gestão unificada e personalizada</h3>
+              <p className="heading-desc text--just">Fundada por médicos e especializada no atendimento a unidades de saúde, a empresa concentra-se na gestão multiassistencial e valoriza a interdisciplinaridade, contando com profissionais de diversas especialidades em sua equipe. Comprometida com o bem-estar da sociedade, a Mediall está constantemente em busca de soluções que aprimorem as decisões dos gestores da área.</p>
+              <div className="actions-holder" style={{ textAlign: "center" }}>
                 <Link className="btn btn--primary btn-line btn-line-after" href="/doctors-grid">
                   <span>Contato</span><span className="line"><span></span></span>
                 </Link>

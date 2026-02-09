@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Medisch - Medical HTML5 Template",
   description: "Medisch Responsive Medical Template",
-  icons: { icon: "/assets/images/favicon/favicon.png" },
+  icons: { icon: "/assets/images/mediall/logoMediall.png" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

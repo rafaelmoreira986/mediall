@@ -12,9 +12,9 @@ const featurePanels = [
 
 export default function FeaturesSection() {
   return (
-    <section className="features features-2 bg-parallax bg-section" id="features-2" style={{ backgroundImage: "url(/assets/images/mediall/banner.jpg)", position: "relative" }}>
+    <section className="features features-2 bg-parallax bg-section" id="features-2">
       <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0, 0, 0, 0.81)", zIndex: 0 }} />
-      <div className="container" style={{ position: "relative", zIndex: 1 }}>
+      <div className="container" style={{ position: "relative", zIndex: 1, maxWidth: "1600px" }}>
         <div className="heading heading-14 heading-light">
           <div className="row justify-content-center">
             <div className="col-12 col-lg-8">
@@ -37,7 +37,7 @@ export default function FeaturesSection() {
                   <div className="feature-icon"><i className={panel.icon}></i></div>
                   <div className="feature-content" style={{ textAlign: "center", alignItems: "center" }}>
                     <h4 style={{ textAlign: "center" }}>{panel.title}</h4>
-                    <p style={{ textAlign: "center" }}>{panel.desc}</p>
+                    <p style={{ textAlign: "justify", textAlignLast: "center", wordBreak: "break-word", hyphens: "auto", fontSize: "13px" }}>{panel.desc}</p>
                   </div>
                   <a href="#" onClick={(e) => e.preventDefault()}><i className="fas fa-angle-down"></i></a>
                 </div>
@@ -45,30 +45,8 @@ export default function FeaturesSection() {
             </div>
           ))}
         </div>
-        <div className="more-features more-features-2">
-        </div>
-        <div className="features-card">
-          <div className="card-panel reversed">
-            <div className="panel-icon"><i className="flaticon-004-transplant-box"></i></div>
-            <div className="panel-body">
-              <h4>Healthcare Programs</h4>
-              <p>We have put protocols to protect our patients to provide medically necessary care.</p>
-              <a className="btn btn-line btn-line-after" href="#">
-                <span>explore programs</span><span className="line"><span></span></span>
-              </a>
-            </div>
-          </div>
-          <div className="card-panel">
-            <div className="panel-icon"><i className="flaticon-042-clinic"></i></div>
-            <div className="panel-body">
-              <h4>Localização &amp; Directions</h4>
-              <p>Feel welcome to contact our friendly reception staff, our doctors will receive your urgent calls.</p>
-              <a className="btn btn-line btn-line-before" href="#">
-                <span className="line"><span></span></span><span>get directions</span>
-              </a>
-            </div>
-          </div>
-        </div>
+         
+         
       </div>
     </section>
   );

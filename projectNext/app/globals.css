@@ -1,3 +1,15 @@
+/* Department modal — pop-in animation */
+@keyframes department-modal-pop {
+  0%   { opacity: 0; transform: scale(0.82); }
+  60%  { opacity: 1; transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+@keyframes department-backdrop-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 /* Restore default cursor (override theme's cursor:none) */
 body {
   cursor: auto !important;
@@ -267,4 +279,59 @@ section {
 
 .processes .process-panel .process-body .process-content a {
   display: none;
+}
+
+/* Navbar links hover – scale up text */
+.navbar-nav .nav-item a {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.navbar-nav .nav-item a:hover {
+  transform: scale(1.1);
+}
+
+/* Quem Somos page – timeline cards hover */
+.quem-somos-timeline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Quem Somos page – value circle hover */
+.quem-somos-value-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(19, 197, 221, 0.25);
+}
+
+/* Departments carousel – uniform image height */
+.departments .department-panel .department-panel-holder .department-img {
+  height: 190px !important;
+}
+
+.departments .department-panel .department-panel-holder .department-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Departments carousel – equal height slides */
+.departments-carousel .swiper-wrapper {
+  align-items: stretch;
+}
+
+.departments-carousel .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.departments-carousel .swiper-slide > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove automatic capitalization/uppercase from all elements site-wide.
+   Text should appear exactly as written in the source. */
+* {
+  text-transform: none !important;
 }

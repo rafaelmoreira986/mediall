@@ -80,9 +80,9 @@ export default function FeaturesBar() {
         <div className="heading heading-15">
           <div className="row justify-content-center">
             <div className="col-12 col-lg-8">
-              <h2 className="heading-title" style={{ textAlign: "center" }}>A Mediall Brasil é reconhecida como líder e referência em gestão de saúde.</h2>
-              <h3 className="paragraph" style={{ textAlign: "center" }}>Além de gerir unidades de saúde públicas e privadas, nos empenhamos em garantir uma gestão unificada e personalizada</h3>
-              <p className="heading-desc text--just">Fundada por médicos e especializada no atendimento a unidades de saúde, a empresa concentra-se na gestão multiassistencial e valoriza a interdisciplinaridade, contando com profissionais de diversas especialidades em sua equipe. Comprometida com o bem-estar da sociedade, a Mediall está constantemente em busca de soluções que aprimorem as decisões dos gestores da área.</p>
+              <h2 className="heading-title" style={{ textAlign: "center" }}>Mediall Brasil  onde gestão e cuidado caminham juntos</h2>
+              <h3 className="paragraph" style={{ textAlign: "center" }}>A Medial Brasil atua como referência em administração e gerenciamento de serviços hospitalares.</h3>
+              <p className="heading-desc text--just">reunindo expertise técnica, equipe qualificada e visão estratégica para garantir: Melhoria contínua dos processos; eficiência no uso de recursos; humanização do atendimento; gestão assistencial baseada em indicadores e sustentabilidade operacional e administrativa.</p>
               <div className="actions-holder" style={{ textAlign: "center" }}>
                 <Link className="btn btn--primary btn-line btn-line-after" href="/doctors-grid">
                   <span>Contato</span><span className="line"><span></span></span>

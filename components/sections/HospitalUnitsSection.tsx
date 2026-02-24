@@ -32,13 +32,28 @@ export default function HospitalUnitsSection() {
     <section
       className="hospital-units"
       id="hospital-units"
-      style={{ padding: "80px 0", backgroundColor: "var(--global--color-gray)" }}
+      style={{
+        padding: "80px 0",
+        position: "relative",
+        backgroundImage: "url('/assets/images/mediall/hospital.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <div className="container">
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.73)",
+          zIndex: 0,
+        }}
+      />
+      <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="row justify-content-center">
           <div className="col-12 col-lg-8 text-center">
             <div className="heading heading-12 heading-13" style={{ marginBottom: "10px" }}>
-              <p className="heading-subtitle">
+              <p className="heading-subtitle" style={{ color: "#7ecbe6" }}>
                 Presente nas seguintes cidades:
               </p>
               <h2
@@ -46,7 +61,7 @@ export default function HospitalUnitsSection() {
                 style={{
                   fontSize: "42px",
                   fontWeight: 700,
-                  color: "var(--global--color-heading)",
+                  color: "#ffffff",
                   marginBottom: "15px",
                 }}
               >
@@ -79,9 +94,9 @@ export default function HospitalUnitsSection() {
                         display: "flex",
                         alignItems: "center",
                         padding: "12px 0",
-                        borderBottom: "1px solid var(--global--color-gray-light)",
+                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
                         fontSize: "16px",
-                        color: "var(--global--color-body)",
+                        color: "#e0e0e0",
                       }}
                     >
                       <i
@@ -93,7 +108,7 @@ export default function HospitalUnitsSection() {
                         }}
                       />
                       <span>
-                        <strong style={{ color: "var(--global--color-heading)" }}>{unit.state}</strong> - {unit.city}
+                        <strong style={{ color: "#ffffff" }}>{unit.state}</strong> - {unit.city}
                       </span>
                     </li>
                   ))}
@@ -111,9 +126,9 @@ export default function HospitalUnitsSection() {
                         display: "flex",
                         alignItems: "center",
                         padding: "12px 0",
-                        borderBottom: "1px solid var(--global--color-gray-light)",
+                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
                         fontSize: "16px",
-                        color: "var(--global--color-body)",
+                        color: "#e0e0e0",
                       }}
                     >
                       <i
@@ -125,7 +140,7 @@ export default function HospitalUnitsSection() {
                         }}
                       />
                       <span>
-                        <strong style={{ color: "var(--global--color-heading)" }}>{unit.state}</strong> - {unit.city}
+                        <strong style={{ color: "#ffffff" }}>{unit.state}</strong> - {unit.city}
                       </span>
                     </li>
                   ))}
@@ -137,7 +152,7 @@ export default function HospitalUnitsSection() {
 
         <div className="row justify-content-center" style={{ marginTop: "40px" }}>
           <div className="col-12 col-lg-8 text-center">
-            <p style={{ color: "var(--global--color-body)", fontSize: "15px" }}>
+            <p style={{ color: "#e0e0e0", fontSize: "15px" }}>
               + de <strong style={{ color: "var(--global--color-primary)", fontSize: "18px" }}>46 projetos</strong> em{" "}
               <strong style={{ color: "var(--global--color-primary)", fontSize: "18px" }}>12 estados</strong> brasileiros
             </p>

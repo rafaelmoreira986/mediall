@@ -1,146 +1,63 @@
-"use client";
-import { useState } from "react";
-
 export default function Footer() {
-  const [email, setEmail] = useState("");
-
   return (
-    <footer className="footer footer-1">
-      <div className="footer-top">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-6 col-lg-3">
-              <div className="footer-widget widget-contact">
-                <div className="footer-widget-title">
-                  <h5>quick contact</h5>
-                </div>
-                <div className="widget-content">
-                  <p>If you have any questions or need help, feel free to contact with our team.</p>
-                  <ul>
-                    <li className="phone">
-                      <a href="tel:+01061245741"><i className="fas fa-phone-alt"></i> 01061245741</a>
-                    </li>
-                    <li className="address">
-                      <a href="#">2307 Beverley Rd Brooklyn, New York 11226 United States.</a>
-                    </li>
-                  </ul>
-                  <a className="directions" href="#" onClick={(e) => e.preventDefault()}>
-                    <i className="icon-arrow-right"></i>get directions
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-md-3 col-lg-2 offset-lg-0">
-              <div className="footer-widget widget-links">
-                <div className="footer-widget-title">
-                  <h5>departments</h5>
-                </div>
-                <div className="widget-content">
-                  <ul>
-                    <li><a href="#">neurology clinic</a></li>
-                    <li><a href="#">pathology clinic</a></li>
-                    <li><a href="#">laboratory analysis</a></li>
-                    <li><a href="#">pediatric clinic</a></li>
-                    <li><a href="#">cardiac clinic</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-md-3 col-lg-2">
-              <div className="footer-widget widget-links">
-                <div className="footer-widget-title">
-                  <h5>links</h5>
-                </div>
-                <div className="widget-content">
-                  <ul>
-                    <li><a href="#">abouts us</a></li>
-                    <li><a href="#">our clinic</a></li>
-                    <li><a href="#">our doctors</a></li>
-                    <li><a href="#">news &amp; media</a></li>
-                    <li><a href="#">appointments</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-md-4 col-lg-2 offset-lg-0">
-              <div className="footer-widget widget-links">
-                <div className="footer-widget-title">
-                  <h5>help</h5>
-                </div>
-                <div className="widget-content">
-                  <ul>
-                    <li><a href="#">help &amp; FAQs</a></li>
-                    <li><a href="#">contacts</a></li>
-                    <li><a href="#">careers</a></li>
-                    <li><a href="#">site map</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-sm-6 col-lg-3">
-              <div className="footer-widget widget-newsletter">
-                <div className="footer-widget-title">
-                  <h5>newsletter</h5>
-                </div>
-                <div className="widget-content">
-                  <form className="form-newsletter" onSubmit={(e) => e.preventDefault()}>
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        type="email"
-                        name="email"
-                        placeholder="Your Email Address"
-                        required
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                      <div className="submit">
-                        <input type="submit" value="" />
-                      </div>
-                    </div>
-                    <div className="custom-radio-group">
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input
-                          className="custom-control-input"
-                          type="radio"
-                          id="customRadioInline2"
-                          name="customRadioInline2"
-                          required
-                        />
-                        <label htmlFor="customRadioInline2">i accept the privacy and terms</label>
-                      </div>
-                    </div>
-                    <div className="subscribe-alert"></div>
-                  </form>
-                </div>
-              </div>
+    <footer style={{ backgroundColor: "#1a2e44", color: "#cdd8e3", padding: "40px 0 20px" }}>
+      <div className="container">
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-start", gap: "32px", marginBottom: "32px" }}>
+          {/* Address */}
+          <div>
+            <h6 style={{ color: "#ffffff", fontWeight: 600, marginBottom: "8px", textTransform: "uppercase", fontSize: "13px", letterSpacing: "0.5px" }}>Endereço</h6>
+            <p style={{ margin: 0, fontSize: "14px", lineHeight: "1.6" }}>
+              Av. T-2, N° 1397 - St. Bueno<br />
+              Goiânia, GO — 74.215-015
+            </p>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h6 style={{ color: "#ffffff", fontWeight: 600, marginBottom: "8px", textTransform: "uppercase", fontSize: "13px", letterSpacing: "0.5px" }}>Contato</h6>
+            <p style={{ margin: "0 0 4px", fontSize: "14px" }}>
+              <a href="tel:+556230881706" style={{ color: "#cdd8e3", textDecoration: "none" }}>+55 62 3088-1706</a>
+            </p>
+            <p style={{ margin: "0 0 4px", fontSize: "14px" }}>
+              <a href="mailto:contato@mediallbrasil.med.br" style={{ color: "#cdd8e3", textDecoration: "none" }}>contato@mediallbrasil.med.br</a>
+            </p>
+            <p style={{ margin: 0, fontSize: "14px" }}>
+              <a href="mailto:secretaria@mediallbrasil.med.br" style={{ color: "#cdd8e3", textDecoration: "none" }}>secretaria@mediallbrasil.med.br</a>
+            </p>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h6 style={{ color: "#ffffff", fontWeight: 600, marginBottom: "12px", textTransform: "uppercase", fontSize: "13px", letterSpacing: "0.5px" }}>Redes Sociais</h6>
+            <div style={{ display: "flex", gap: "16px" }}>
+              <a
+                href="https://www.instagram.com/mediallbrasil/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Instagram"
+                style={{ color: "#cdd8e3", fontSize: "22px", transition: "color 0.2s" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#e1306c")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#cdd8e3")}
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://br.linkedin.com/company/mediallbrasil"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                style={{ color: "#cdd8e3", fontSize: "22px", transition: "color 0.2s" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#0077b5")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#cdd8e3")}
+              >
+                <i className="fab fa-linkedin-in"></i>
+              </a>
             </div>
           </div>
-          <div className="clearfix"></div>
         </div>
-      </div>
-      <div className="footer-bottom">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="footer-copyright">
-                <div className="copyright">
-                  <span>&copy; 2021 medisch by <a href="#">Zytheme.com</a>. all rights reserved.</span>
-                  <ul className="list-unstyled social-icons">
-                    <li>
-                      <a className="share-facebook" href="#"><i className="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                      <a className="share-instagram" href="#"><i className="fab fa-instagram"></i></a>
-                    </li>
-                    <li>
-                      <a className="share-twitter" href="#"><i className="fab fa-twitter"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+
+        <div style={{ borderTop: "1px solid #2e4560", paddingTop: "16px", textAlign: "center", fontSize: "13px", color: "#7a94aa" }}>
+          &copy; {new Date().getFullYear()} Mediall Brasil. Todos os direitos reservados.
         </div>
       </div>
     </footer>

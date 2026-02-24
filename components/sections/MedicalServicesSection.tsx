@@ -26,18 +26,37 @@ const services = [
 
 export default function MedicalServicesSection() {
   return (
-    <section className="services services-2" id="services-2">
-      <div className="bg-section">
+    <section
+      className="services services-2"
+      id="services-2"
+      style={{
+        position: "relative",
+        backgroundImage: "url('/assets/images/mediall/hospital.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        marginTop: "5rem",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundColor: "rgba(0, 6, 14, 0.7)",
+          zIndex: 0,
+        }}
+      />
+      <div className="bg-section" style={{ display: "none" }}>
         <img src="/assets/images/background/pattern.png" alt="background" />
       </div>
-      <div className="container">
+      <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
             <div className="heading heading-7 text--center">
-              <p className="heading-subtitle">
+              <p className="heading-subtitle" style={{ color: "#7ecbe6", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: "0.9rem" }}>
                 Mais de 9 anos em Gestão de Negócios em Saúde
               </p>
-              <h2 className="heading-title">
+              <h2 className="heading-title" style={{ color: "#ffffff", fontWeight: 700 }}>
                 Uma historia de Compromisso, Cuidados e Desenvolvimento na Saúde
               </h2>
             </div>

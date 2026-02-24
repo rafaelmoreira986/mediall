@@ -10,24 +10,28 @@ import CtaSection from "@/components/sections/CtaSection";
 import HospitalUnitsSection from "@/components/sections/HospitalUnitsSection";
 import DonationsSection from "@/components/sections/DonationsSection";
 import BlogCarousel from "@/components/sections/BlogCarousel";
+import AboutAvatarsSection from "@/components/sections/AboutAvatarsSection";
 
 export default function HomePage() {
   return (
     <>
       <HeroSlider />
       <FeaturesBar />
-      {/* <AboutSection /> */}
+      <AboutAvatarsSection />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
       <MedicalServicesSection />
       <DepartmentsSection />
-      <CtaSection />
+        
+      
+      
       <HospitalUnitsSection />
-      <FeaturesSection />
+      <CtaSection />
+      {/* <FeaturesSection /> */}
+      {/* <TeamCarousel /> */}
       {/* <TestimonialSection />
-      <TeamCarousel />
-      
-      
       <DonationsSection />
       <BlogCarousel /> */}
+      {/* <AboutSection /> */}
     </>
   );
 }

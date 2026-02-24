@@ -13,7 +13,7 @@ export const mainNavigation: NavItem[] = [
   },
   {
     label: "Quem Somos",
-    href: "/page-about",
+    href: "/quem-somos",
     id: "quem-somos",
   },
   {
@@ -35,10 +35,5 @@ export const mainNavigation: NavItem[] = [
     label: "Trabalhe Conosco",
     href: "/trabalhe-conosco",
     id: "trabalhe-conosco",
-  },
-  {
-    label: "Contato",
-    href: "/contact",
-    id: "contato",
   },
 ];

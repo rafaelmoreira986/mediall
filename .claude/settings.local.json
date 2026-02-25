@@ -21,7 +21,29 @@
       "Bash(curl -s \"https://flagcdn.com/es.svg\" -o \"/c/Users/rafae/projects/medialltheme/projectNext/public/assets/images/flags/es.svg\")",
       "Bash(curl -L \"https://flagcdn.com/br.svg\" -o \"/c/Users/rafae/projects/medialltheme/projectNext/public/assets/images/flags/br.svg\")",
       "Bash(curl -L \"https://flagcdn.com/es.svg\" -o \"/c/Users/rafae/projects/medialltheme/projectNext/public/assets/images/flags/es.svg\")",
-      "Bash(git push origin main)"
+      "Bash(git push origin main)",
+      "Bash(npm run dev)",
+      "Bash(curl -s \"https://api.github.com/repos/rafaelmoreira18/mediallWebsite/hooks\" -H \"Accept: application/vnd.github.v3+json\")",
+      "Bash(python3 -c \"import sys,json; hooks=json.load\\(sys.stdin\\); [print\\(f''ID: {h[\"\"id\"\"]} | URL: {h[\"\"config\"\"].get\\(\"\"url\"\",\"\"\"\"\\)} | Active: {h[\"\"active\"\"]}''\\) for h in hooks]\")",
+      "Bash(git config user.email)",
+      "Bash(git config user.name)",
+      "Bash(git config user.email \"rafafelipe9444@gmail.com\")",
+      "Bash(git config user.name \"rafaelmoreira18\")",
+      "Bash(ipconfig /flushdns)",
+      "Bash(git remote add mediallbrasil https://github.com/rafaelmoreira18/mediallBrasil.git)",
+      "Bash(git push mediallbrasil main)",
+      "Bash(git subtree push --prefix=projectNext mediallbrasil main)",
+      "Bash(git ls-tree mediallbrasil/main --name-only)",
+      "Bash(npm show next version)",
+      "Bash(npm show next@16.1.6 version)",
+      "Bash(npm show react@19.2.3 version)",
+      "Bash(head -3 /c/Users/User/projects/mediallwebsite/projectNext/app/compliance/dashboard/[id]/page.tsx)",
+      "Bash(git pull mediallbrasil main --no-rebase)",
+      "Bash(git checkout 7a13380 -- projectNext/)",
+      "WebFetch(domain:www.vercel-status.com)",
+      "WebFetch(domain:mediall-brasil.vercel.app)",
+      "WebFetch(domain:mediall-brasil-d8vrnysme-rafaelmoreira18s-projects.vercel.app)",
+      "WebFetch(domain:mediall-website-jjnjo2cr7-rafaelmoreira18s-projects.vercel.app)"
     ]
   }
 }

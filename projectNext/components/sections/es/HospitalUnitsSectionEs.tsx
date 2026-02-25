@@ -193,7 +193,7 @@ export default function HospitalUnitsSectionEs() {
       style={{
         padding: "80px 0",
         position: "relative",
-        backgroundImage: "url('/assets/images/mediall/hospital-modern.png')",
+        backgroundImage: "url('/assets/images/mediall/blue-hospital.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

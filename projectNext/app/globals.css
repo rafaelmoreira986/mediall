@@ -376,6 +376,30 @@ section {
   padding: 0 !important;
 }
 
+/* Remove large bottom padding the theme adds to features-bar */
+.features-bar {
+  padding-bottom: 0 !important;
+}
+.features-bar .features-holder {
+  transform: none !important;
+  -webkit-transform: none !important;
+  margin-bottom: 0 !important;
+}
+
+/* Hero slider – background position: top on desktop default, top center on mobile */
+.slider.slider-2 .slide {
+  background-position: center -5%;
+}
+
+@media (max-width: 809px) {
+  .slider.slider-2 .slide,
+  .slider.slider-2 .slide.bg-overlay-dark-slider,
+  .bg-overlay-dark-slider.bg-section {
+    background-position: top center !important;
+    background-position-y: 0px !important;
+  }
+}
+
 /* Hero slider – label & headline sizing */
 .hero-label {
   font-size: 3rem;

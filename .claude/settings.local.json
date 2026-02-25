@@ -14,7 +14,14 @@
       "Bash(grep:*)",
       "Bash(find:*)",
       "WebFetch(domain:mediallbrasil.med.br)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(npm run build)",
+      "Bash(git push)",
+      "Bash(curl -s \"https://flagcdn.com/br.svg\" -o \"/c/Users/rafae/projects/medialltheme/projectNext/public/assets/images/flags/br.svg\")",
+      "Bash(curl -s \"https://flagcdn.com/es.svg\" -o \"/c/Users/rafae/projects/medialltheme/projectNext/public/assets/images/flags/es.svg\")",
+      "Bash(curl -L \"https://flagcdn.com/br.svg\" -o \"/c/Users/rafae/projects/medialltheme/projectNext/public/assets/images/flags/br.svg\")",
+      "Bash(curl -L \"https://flagcdn.com/es.svg\" -o \"/c/Users/rafae/projects/medialltheme/projectNext/public/assets/images/flags/es.svg\")",
+      "Bash(git push origin main)"
     ]
   }
 }

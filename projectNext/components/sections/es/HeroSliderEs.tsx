@@ -1,9 +1,10 @@
 "use client";
+import { useEffect, useState } from "react";
 import SwiperCarousel from "@/components/ui/SwiperCarousel";
 
 const slides = [
   {
-    bg: "/assets/images/mediall/Imagens.jpeg",
+    bg: "/assets/images/mediall/mobileIMG.png",
     label: "Especialistas en",
     headline: "Gestión en Salud",
     desc: "",
@@ -11,12 +12,31 @@ const slides = [
 ];
 
 export default function HeroSliderEs() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 809);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
     <section className="slider slider-2" id="slider-2">
       <div className="container-fluid pr-0 pl-0">
         <SwiperCarousel autoplay loop speed={800}>
           {slides.map((slide, i) => (
-            <div key={i} className="slide bg-overlay bg-overlay-dark-slider bg-section" style={{ backgroundImage: `url(${slide.bg})`, backgroundPosition: "center -5%", position: "relative" }}>
+            <div
+              key={i}
+              className="slide bg-overlay bg-overlay-dark-slider bg-section"
+              style={{
+                backgroundImage: `url(${slide.bg})`,
+                backgroundSize: "cover",
+                backgroundPositionX: "center",
+                backgroundPositionY: isMobile ? "0px" : "150px",
+                position: "relative",
+              }}
+            >
               <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(17, 16, 16, 0.66)", zIndex: 1 }} />
               <div className="container" style={{ position: "relative", zIndex: 2 }}>
                 <div className="slide-content">

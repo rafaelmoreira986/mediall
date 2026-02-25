@@ -194,11 +194,10 @@ export default function MediallStatsSectionEs() {
         .mediall-stats-section {
           display: flex;
           align-items: center;
-          gap: 48px;
-          padding: 60px 48px;
+          gap: 60px;
+          padding: 75px 60px;
           max-width: 1400px;
           margin: 0 auto;
-          zoom: 1.25;
         }
         .mediall-stats-left {
           flex: 0 0 38%;
@@ -260,7 +259,7 @@ export default function MediallStatsSectionEs() {
         }
       `}</style>
 
-      <section ref={sectionRef} style={{ width: "100%", paddingBottom: "4rem", paddingLeft: "24px", paddingRight: "24px" }}>
+      <section ref={sectionRef} style={{ width: "100%", padding: "0", backgroundImage: "url('/assets/images/background/pattern-2.jpg')" }}>
         <div className="mediall-stats-section">
 
           <div className="mediall-stats-left">

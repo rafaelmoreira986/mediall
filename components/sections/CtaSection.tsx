@@ -19,12 +19,6 @@ const processes = [
     title: "Valores",
     desc: "Ética, transparência, credibilidade, competência, comprometimento, profissionalismo e atenção ao bem-estar de pacientes e colaboradores.",
   },
-  {
-    number: "04.",
-    icon: ".flaticon-021-medical-1",
-    title: "Mediall Brasil",
-    desc: "Na busca constante pela excelência, nossa empresa de gestão em saúde fundamenta-se na integridade, garantindo uma administração ética e transparente.",
-  },
 ];
 
 export default function CtaSection() {
@@ -32,24 +26,10 @@ export default function CtaSection() {
     <section className="cta cta-3" id="cta-3">
       <div className="container">
         <div className="heading heading-6">
-          <div className="row">
-            <div className="col-12 col-lg-5">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-8 text-center">
               <p className="heading-subtitle">Nosso propósito vai além da gestão</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12 col-lg-5">
-              <h2 className="heading-title">Transformando a realidade da saúde em todo o Brasil</h2>
-            </div>
-            <div className="col-12 col-lg-6 offset-lg-1">
-              <div className="prief-set">
-                <p>Desde o início, buscamos fornecer soluções médicas que vão da organização de plantões à gestão plena de centros hospitalares. Diante das demandas crescentes, expandimos nossa atuação e hoje levamos governança corporativa e atendimento de excelência a unidades públicas e privadas.</p>
-                <ul className="list-unstyled advantages-list">
-                  <li><i className="fas fa-check"></i> Ética</li>
-                  <li><i className="fas fa-check"></i> Transparência</li>
-                  <li><i className="fas fa-check"></i> Integridade</li>
-                </ul>
-              </div>
+              <h2 className="heading-title">Valores</h2>
             </div>
           </div>
         </div>
@@ -57,7 +37,7 @@ export default function CtaSection() {
       <div className="processes">
         <div className="row g-0">
           {processes.map((proc, i) => (
-            <div key={i} className="col-12 col-md-6 col-xl-3">
+            <div key={i} className="col-12 col-md-6 col-xl-4">
               <div className="process-panel" data-hover="">
                 <p className="process-number">{proc.number}</p>
                 <div className="process-body">

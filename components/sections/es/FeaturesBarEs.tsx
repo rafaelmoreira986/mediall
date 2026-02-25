@@ -1,77 +1,91 @@
 "use client";
-import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+
+interface Stat {
+  id: string;
+  prefix?: string;
+  target: number;
+  label: string;
+  sublabel?: string;
+  icon: string;
+}
+
+const STATS: Stat[] = [
+  { id: "unidades",      prefix: "+", target: 52,    label: "Unidades",      sublabel: "de Salud desde 2017",   icon: "flaticon-022-medical" },
+  { id: "estados",                    target: 13,    label: "Estados",       sublabel: "Brasileños + DF",       icon: "flaticon-042-clinic" },
+  { id: "cirugias",                   target: 21300, label: "Cirugías",      sublabel: "Realizadas",            icon: "flaticon-016-medical-tools" },
+  { id: "consultas",                  target: 80300, label: "Consultas",     sublabel: "Realizadas",            icon: "flaticon-027-medical-report" },
+  { id: "camas",                      target: 1104,  label: "Camas",         sublabel: "Gestionadas",           icon: "flaticon-033-medical-bed" },
+  { id: "profesionales",              target: 10400, label: "Profesionales", sublabel: "de la Salud",           icon: "flaticon-025-examination" },
+];
+
+function useCounter(target: number, active: boolean, duration = 3500): number {
+  const [value, setValue] = useState(0);
+  const startRef = useRef<number | null>(null);
+  const rafRef = useRef<number>(0);
+
+  useEffect(() => {
+    if (!active) return;
+    startRef.current = null;
+    const animate = (ts: number) => {
+      if (!startRef.current) startRef.current = ts;
+      const progress = Math.min((ts - startRef.current) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setValue(Math.floor(eased * target));
+      if (progress < 1) rafRef.current = requestAnimationFrame(animate);
+      else setValue(target);
+    };
+    rafRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [active, target, duration]);
+
+  return value;
+}
+
+function StatCard({ stat, active }: { stat: Stat; active: boolean }) {
+  const value = useCounter(stat.target, active);
+  const formatted = value.toLocaleString("es-ES");
+
+  return (
+    <div className="col-12 col-sm-6 col-lg-2" style={{ display: "flex" }}>
+      <div className="feature-panel feature-timetable" style={{ width: "100%", textAlign: "center" }}>
+        <div className="feature-content" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "8px" }}>
+          <i className={stat.icon} style={{ fontSize: "2rem" }}></i>
+          <div style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)", fontWeight: 800, lineHeight: 1, color: "#fff" }}>
+            {stat.prefix}{formatted}
+          </div>
+          <div style={{ fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)", fontWeight: 700, lineHeight: 1.2, color: "#fff" }}>
+            {stat.label}
+            {stat.sublabel && <><br /><span style={{ fontWeight: 400, opacity: 0.85 }}>{stat.sublabel}</span></>}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function FeaturesBarEs() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting && !active) setActive(true); },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [active]);
+
   return (
-    <section className="features-bar bg-section" id="featuresBar-1" style={{ backgroundImage: "url(/assets/images/background/pattern-2.jpg)" }}>
+    <section ref={sectionRef} className="features-bar bg-section" id="featuresBar-1" style={{ backgroundImage: "url(/assets/images/background/pattern-2.jpg)" }}>
       <div className="container">
         <div className="row g-0 features-holder" style={{ display: "flex", flexWrap: "wrap" }}>
-          <div className="col-12 col-lg-3" style={{ display: "flex" }}>
-            <div className="feature-panel feature-reservation" style={{ width: "100%" }}>
-              <div className="feature-content">
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <i className="flaticon-022-medical"></i>
-                  <h5 style={{ textAlign: "center" }}>Secretaría general</h5>
-                </div>
-                <p style={{ textAlign: "justify" }}>Para obtener más información sobre nuestra empresa, comuníquese con nuestra sede:</p>
-                <a href="tel:3088-1706" className="features-bar-link" style={{ fontSize: "16px", display: "flex", alignItems: "center", gap: "6px", lineHeight: 1 }}><span className="fas fa-phone-alt" style={{ fontSize: "12px", lineHeight: 1 }}></span>62 3088-1706</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-lg-3" style={{ display: "flex" }}>
-            <div className="feature-panel feature-timetable" style={{ width: "100%" }}>
-              <div className="feature-content">
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <i className="flaticon-027-medical-report"></i>
-                  <h5 style={{ textAlign: "center" }}>Gestión de contratos</h5>
-                </div>
-                <p style={{ textAlign: "justify" }}>Si eres proveedor y deseas hablar con alguien de Mediall Brasil, comunícate:</p>
-                <a href="mailto:analista.contratos@mediallbrasil.med.br" className="features-bar-link" style={{ fontSize: "16px", display: "flex", alignItems: "center", gap: "6px", color: "#fff", lineHeight: 1 }}>
-                  <span className="fas fa-envelope" style={{ fontSize: "12px", lineHeight: 1 }}></span>Enviar correo
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-lg-3" style={{ display: "flex" }}>
-            <div className="feature-panel feature-opening-hours" style={{ width: "100%" }}>
-              <div className="feature-content">
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <i className="flaticon-014-uniform"></i>
-                  <h5 style={{ textAlign: "center" }}>Horario de atención</h5>
-                </div>
-                <ul className="list-unstyled">
-                  <li><span>Lunes - Viernes</span><span>8:00 - 18:00</span></li>
-                  <li><span>Sábado - domingo</span><span>cerrado</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-lg-3" style={{ display: "flex" }}>
-            <div className="feature-panel feature-location" style={{ width: "100%" }}>
-              <div className="feature-content">
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <i className="flaticon-042-clinic"></i>
-                  <h5 style={{ textAlign: "center" }}>Ubicación</h5>
-                </div>
-                <div className="map-img">
-                  <a href="https://maps.app.goo.gl/zU9i1neku9UdjVXt9" target="_blank" rel="noopener noreferrer">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.8!2d-49.2655!3d-16.6944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef114a36e13d%3A0x0!2sAv.%20A%2C%20273%20-%20Santo%20Ant%C3%B4nio%2C%20Goi%C3%A2nia%20-%20GO!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
-                      width="100%"
-                      height="120"
-                      style={{ border: 0, borderRadius: "4px", pointerEvents: "none" }}
-                      allowFullScreen={false}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                  </a>
-                </div>
-                <a href="https://maps.app.goo.gl/zU9i1neku9UdjVXt9" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "8px", color: "inherit", textDecoration: "none" }}>
-                  <span className="fas fa-map-marker-alt"></span> Ubicación
-                </a>
-              </div>
-            </div>
-          </div>
+          {STATS.map((stat) => (
+            <StatCard key={stat.id} stat={stat} active={active} />
+          ))}
         </div>
         <div className="heading heading-15">
           <div className="row justify-content-center">

@@ -198,10 +198,6 @@ export default function MediallStatsSectionEs() {
           padding: 60px 48px;
           max-width: 1400px;
           margin: 0 auto;
-          background: #ffffff;
-          border-radius: 20px;
-          box-shadow: 0 8px 48px rgba(29, 42, 77, 0.28), 0 2px 12px rgba(29, 42, 77, 0.14);
-          border-top: 4px solid #263967;
           zoom: 1.25;
         }
         .mediall-stats-left {
@@ -264,7 +260,7 @@ export default function MediallStatsSectionEs() {
         }
       `}</style>
 
-      <section ref={sectionRef} style={{ width: "100%", paddingBottom: "4rem", paddingLeft: "24px", paddingRight: "24px", background: "#1d2a4d" }}>
+      <section ref={sectionRef} style={{ width: "100%", paddingBottom: "4rem", paddingLeft: "24px", paddingRight: "24px" }}>
         <div className="mediall-stats-section">
 
           <div className="mediall-stats-left">

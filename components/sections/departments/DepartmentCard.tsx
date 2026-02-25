@@ -19,7 +19,10 @@ export default function DepartmentCard({ department }: DepartmentCardProps) {
             <img
               src={department.img}
               alt={department.title}
-              style={{ objectPosition: department.imgPosition ?? "center" }}
+              style={{
+                objectPosition: department.imgPosition ?? "center",
+                objectFit: (department.imgFit as any) ?? undefined,
+              }}
             />
           </div>
           <div className="department-content" style={{ flex: 1, display: "flex", flexDirection: "column" }}>

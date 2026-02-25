@@ -22,6 +22,11 @@ export const esNavigation: NavItem[] = [
     id: "soluciones",
   },
   {
+    label: "Unidades Hospitalarias",
+    href: "#hospital-units",
+    id: "unidades-hospitalarias",
+  },
+  {
     label: "Compliance",
     href: "/es/compliance",
     id: "compliance",
@@ -43,6 +48,11 @@ export const mainNavigation: NavItem[] = [
     label: "Soluções/Serviços",
     href: "#departments-2",
     id: "solucoes",
+  },
+  {
+    label: "Unidades Hospitalares",
+    href: "#hospital-units",
+    id: "unidades-hospitalares",
   },
   {
     label: "Compliance",

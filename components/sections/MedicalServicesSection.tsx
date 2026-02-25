@@ -77,7 +77,7 @@ export default function MedicalServicesSection() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        marginTop: "5rem",
+        marginTop: 0,
       }}
     >
       {/* Dark overlay */}

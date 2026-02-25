@@ -80,7 +80,7 @@ export default function FeaturesBar() {
   }, [active]);
 
   return (
-    <section ref={sectionRef} className="features-bar bg-section" id="featuresBar-1" style={{ backgroundImage: "url(/assets/images/background/pattern-2.jpg)" }}>
+    <section ref={sectionRef} className="features-bar bg-section" id="featuresBar-1">
       <div className="container">
         <div className="row g-0 features-holder" style={{ display: "flex", flexWrap: "wrap" }}>
           {STATS.map((stat) => (

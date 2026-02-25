@@ -47,7 +47,7 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/diagnostic.jpg",
+    img: "/assets/images/mediall/portfolio.png",
     imgPosition: "top",
     title: "Serviços de Apoio Diagnóstico e Terapêutico",
     items: [
@@ -156,7 +156,8 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/meeting.jpg",
+    img: "/assets/images/mediall/facilities.png",
+    imgFit: "contain",
     title: "Facilities",
     items: [
       "Limpeza e Higienização",
@@ -249,7 +250,7 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/ps.jpg",
+    img: "/assets/images/mediall/Portfolio Mediall Brasil 26.pdf.png",
     title: "Assessoria Hospitalar",
     items: [
       "Consultoria estratégica especializada para apoiar líderes hospitalares na tomada de decisões críticas e no alcance de resultados de alta performance.",
@@ -275,7 +276,7 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/trabalhe-conosco.jpg",
+    img: "/assets/images/mediall/happy.png",
     title: "Pesquisa de Satisfação e Concierge",
     items: [
       "Programas de pesquisa de satisfação e concierge hospitalar, colocando a experiência do paciente no centro da estratégia institucional.",

@@ -1,24 +1,48 @@
 "use client";
+import { useEffect, useState } from "react";
 import SwiperCarousel from "@/components/ui/SwiperCarousel";
+
 
 const slides = [
   {
-    bg: "/assets/images/mediall/Imagens.jpeg",
+    bg: "/assets/images/mediall/imagens.jpeg",
+    bgMobile: "/assets/images/mediall/correctMobile.png", // Add your mobile image here
     label: "Especialistas em",
     headline: "Gestão em Saúde",
     desc: "",
   },
-   
 ];
 
-
 export default function HeroSlider() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [windowHeight, setWindowHeight] = useState(0);
+
+  useEffect(() => {
+    const check = () => {
+      setIsMobile(window.innerWidth <= 830);
+      setWindowHeight(window.innerHeight);
+    };
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
     <section className="slider slider-2" id="slider-2">
       <div className="container-fluid pr-0 pl-0">
         <SwiperCarousel autoplay loop speed={800}>
           {slides.map((slide, i) => (
-            <div key={i} className="slide bg-overlay bg-overlay-dark-slider bg-section" style={{ backgroundImage: `url(${slide.bg})`, backgroundPosition: "center -5%", position: "relative"}}>
+            <div
+              key={i}
+              className="slide bg-overlay bg-overlay-dark-slider bg-section"
+              style={{
+                backgroundImage: `url(${isMobile && slide.bgMobile ? slide.bgMobile : slide.bg})`,
+                backgroundSize: isMobile ? "cover" : "cover",
+                backgroundPosition: isMobile ? "center center" : "center 150px",
+                minHeight: isMobile ? windowHeight : undefined,
+                position: "relative",
+              }}
+            >
               <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(17, 16, 16, 0.66)", zIndex: 1 }} />
               <div className="container" style={{ position: "relative", zIndex: 2 }}>
                 <div className="slide-content">

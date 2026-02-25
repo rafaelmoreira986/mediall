@@ -65,7 +65,7 @@ export default function QuienesSomosPage() {
       >
         <div className="bg-section">
           <img
-            src="/assets/images/mediall/hospital-hall.jpeg"
+            src="/assets/images/mediall/modern-hospital-room.jpg"
             alt="Mediall Brasil"
           />
         </div>
@@ -79,8 +79,6 @@ export default function QuienesSomosPage() {
                     color: "#fff",
                     fontSize: "clamp(28px, 4vw, 52px)",
                     lineHeight: 1.2,
-                    textShadow:
-                      "1px 1px 0px rgba(7,7,7,0.8), 2px 2px 0px rgba(255,255,255,0.15), 4px 4px 12px rgba(0,0,0,0.5)",
                   }}
                 >
                   9 Años de Compromiso, Cuidado y Desarrollo en Salud

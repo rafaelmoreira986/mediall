@@ -1,75 +1,78 @@
-"use client";
-import { useEffect, useState } from "react";
-import SwiperCarousel from "@/components/ui/SwiperCarousel";
-
-const slides = [
-  {
-    bg: "/assets/images/mediall/mobileIMG.png",
-    label: "Especialistas en",
-    headline: "Gestión en Salud",
-    desc: "",
-  },
-];
-
 export default function HeroSliderEs() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth <= 809);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
   return (
-    <section className="slider slider-2" id="slider-2">
-      <div className="container-fluid pr-0 pl-0">
-        <SwiperCarousel autoplay loop speed={800}>
-          {slides.map((slide, i) => (
-            <div
-              key={i}
-              className="slide bg-overlay bg-overlay-dark-slider bg-section"
-              style={{
-                backgroundImage: `url(${slide.bg})`,
-                backgroundSize: "cover",
-                backgroundPositionX: "center",
-                backgroundPositionY: isMobile ? "0px" : "150px",
-                position: "relative",
-              }}
-            >
-              <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(17, 16, 16, 0.66)", zIndex: 1 }} />
-              <div className="container" style={{ position: "relative", zIndex: 2 }}>
-                <div className="slide-content">
-                  <div className="row">
-                    <div className="col-12">
-                      <div style={{ marginTop: "285px", textAlign: "right" }}>
-                        <p className="hero-label" style={{
-                          color: "#00bcd4",
-                          fontWeight: 500,
-                          letterSpacing: "-0.02em",
-                          wordSpacing: "-0.05em",
-                          margin: 0,
-                          lineHeight: 1.1,
-                        }}>{(slide as any).label}</p>
-                        <h1 className="slide-headline hero-headline" style={{
-                          color: "#ffffff",
-                          fontWeight: 800,
-                          lineHeight: 1.1,
-                          whiteSpace: "pre-line",
-                          textAlign: "right",
-                          margin: 0,
-                          letterSpacing: "-0.02em",
-                          wordSpacing: "-0.05em",
-                        }}>{slide.headline}</h1>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </SwiperCarousel>
-      </div>
-    </section>
+    <>
+      <style>{`
+        .hero-custom-es {
+          width: 100%;
+          height: 800px;
+          position: relative;
+          background-image: url(/assets/images/mediall/mobileIMG.png);
+          background-size: cover;
+          background-position: center 15px;
+          background-repeat: no-repeat;
+        }
+        @media (max-width: 840px) {
+          .hero-custom-es {
+            height: 700px;
+            background-position: center top;
+          }
+        }
+        .hero-custom-es-overlay {
+          position: absolute;
+          inset: 0;
+          background-color: rgba(17, 16, 16, 0.66);
+          z-index: 1;
+        }
+        .hero-custom-es-content {
+          position: relative;
+          z-index: 2;
+          height: 100%;
+          display: flex;
+          align-items: flex-end;
+          padding-bottom: 120px;
+        }
+        .hero-custom-es-text {
+          width: 100%;
+          text-align: right;
+        }
+        .hero-custom-es-label {
+          color: #00bcd4;
+          font-size: 3rem;
+          font-weight: 500;
+          letter-spacing: -0.02em;
+          word-spacing: -0.05em;
+          margin: 0;
+          line-height: 1.1;
+        }
+        .hero-custom-es-headline {
+          color: #ffffff;
+          font-size: 4.5rem;
+          font-weight: 800;
+          line-height: 1.1;
+          text-align: right;
+          margin: 0;
+          letter-spacing: -0.02em;
+          word-spacing: -0.05em;
+        }
+        @media (max-width: 767px) {
+          .hero-custom-es-label {
+            font-size: 1.6rem;
+          }
+          .hero-custom-es-headline {
+            font-size: 2.4rem;
+          }
+        }
+      `}</style>
+
+      <section className="hero-custom-es">
+        <div className="hero-custom-es-overlay" />
+        <div className="container hero-custom-es-content">
+          <div className="hero-custom-es-text">
+            <p className="hero-custom-es-label">Especialistas en</p>
+            <h1 className="hero-custom-es-headline">Gestión en Salud</h1>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

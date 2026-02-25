@@ -417,23 +417,26 @@ export default function HospitalUnitsSectionEs() {
               </div>
             </div>
 
-            {/* Hospital list — Serviços-style 2-col grid */}
+            {/* Hospital list — flat 2-col grid (equal column widths, aligned rows) */}
             {(() => {
-              const left = selected.hospitals.filter((_, i) => i % 2 === 0);
-              const right = selected.hospitals.filter((_, i) => i % 2 === 1);
+              const total = selected.hospitals.length;
               return (
-                <div className="two-col-grid-dark">
-                  <div>
-                    {left.map((h, i) => (
-                      <HospitalRowEs key={i} h={h} isLast={i === left.length - 1} activeLabel="Activo" />
-                    ))}
-                  </div>
-                  <div className="two-col-grid-divider" />
-                  <div>
-                    {right.map((h, i) => (
-                      <HospitalRowEs key={i} h={h} isLast={i === right.length - 1} activeLabel="Activo" />
-                    ))}
-                  </div>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", border: "1px solid #1a4a72", borderRadius: "4px", overflow: "hidden" }}>
+                  {selected.hospitals.map((h, i) => {
+                    const isLastRow = Math.floor(i / 2) === Math.floor((total - 1) / 2);
+                    const isLeftCol = i % 2 === 0;
+                    return (
+                      <div
+                        key={i}
+                        style={{
+                          borderRight: isLeftCol ? "1px solid #1a4a72" : "none",
+                          borderBottom: isLastRow ? "none" : "1px solid #1a4a72",
+                        }}
+                      >
+                        <HospitalRowEs h={h} isLast={true} activeLabel="Activo" />
+                      </div>
+                    );
+                  })}
                 </div>
               );
             })()}

@@ -6,7 +6,7 @@ export default function HeroSlider() {
           width: 100%;
           height: 800px;
           position: relative;
-          background-image: url(/assets/images/mediall/imagens.jpeg);
+          background-image: url(/assets/images/mediall/Imagens.jpeg);
           background-size: cover;
           background-position: center 15px;
           background-repeat: no-repeat;

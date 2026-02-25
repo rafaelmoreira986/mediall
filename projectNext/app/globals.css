@@ -83,11 +83,11 @@ section {
 /* Swiper overrides to work with existing theme */
 .swiper-button-next,
 .swiper-button-prev {
-  color: inherit;
+  display: none !important;
 }
 
-.swiper-pagination-bullet-active {
-  background: var(--color-primary, #13c5dd);
+.swiper-pagination {
+  display: none !important;
 }
 
 /* Ensure custom cursor stays visible above all sections */
@@ -312,6 +312,7 @@ section {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+  object-position: inherit;
 }
 
 /* Departments carousel – equal height slides */
@@ -334,4 +335,13 @@ section {
    Text should appear exactly as written in the source. */
 * {
   text-transform: none !important;
+}
+
+/* Features bar — phone & email links hover */
+.features-bar-link {
+  transition: color 0.2s ease;
+}
+.features-bar-link:hover,
+.features-bar-link:hover span {
+  color: #13c5dd !important;
 }

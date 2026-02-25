@@ -16,7 +16,11 @@ export default function DepartmentCard({ department }: DepartmentCardProps) {
       <div className="department-panel" data-hover="" style={{ height: "100%", display: "flex", flexDirection: "column" }}>
         <div className="department-panel-holder" style={{ flex: 1, display: "flex", flexDirection: "column" }}>
           <div className="department-img">
-            <img src={department.img} alt={department.title} />
+            <img
+              src={department.img}
+              alt={department.title}
+              style={{ objectPosition: department.imgPosition ?? "center" }}
+            />
           </div>
           <div className="department-content" style={{ flex: 1, display: "flex", flexDirection: "column" }}>
             <div className="department-title">

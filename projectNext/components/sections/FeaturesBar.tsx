@@ -14,7 +14,7 @@ export default function FeaturesBar() {
                   <h5 style={{ textAlign: "center" }}>Secretaria geral</h5>
                 </div>
                 <p style={{ textAlign: "justify" }}>Para obter mais informações sobre nossa empresa, entre em contato com a nossa matriz:</p>
-                <a href="tel:3088-1706" style={{ fontSize: "16px", display: "flex", alignItems: "center", gap: "6px" }}><span className="fas fa-phone-alt" style={{ fontSize: "12px" }}></span>62 3088-1706</a>
+                <a href="tel:3088-1706" className="features-bar-link" style={{ fontSize: "16px", display: "flex", alignItems: "center", gap: "6px", lineHeight: 1 }}><span className="fas fa-phone-alt" style={{ fontSize: "12px", lineHeight: 1 }}></span>62 3088-1706</a>
               </div>
             </div>
           </div>
@@ -26,8 +26,8 @@ export default function FeaturesBar() {
                   <h5 style={{ textAlign: "center" }}>Gestão de contratos</h5>
                 </div>
                 <p style={{ textAlign: "justify" }}>Se você é fornecedor e deseja falar com alguém da Mediall Brasil, entre em contato:</p>
-                <a href="mailto:analista.contratos@mediallbrasil.med.br" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <span className="fas fa-envelope"></span> Enviar e-mail
+                <a href="mailto:analista.contratos@mediallbrasil.med.br" className="features-bar-link" style={{ fontSize: "16px", display: "flex", alignItems: "center", gap: "6px", color: "#fff", lineHeight: 1 }}>
+                  <span className="fas fa-envelope" style={{ fontSize: "12px", lineHeight: 1 }}></span>Enviar e-mail
                 </a>
               </div>
             </div>
@@ -91,12 +91,6 @@ eficiência assistencial. Ao longo do tempo, ampliou sua atuação para um
 modelo de gestão integrada, incorporando governança corporativa e
 soluções estratégicas voltadas à qualidade e sustentabilidade
 operacional</p>
-              <div className="actions-holder" style={{ textAlign: "center" }}>
-                <Link className="btn btn--primary btn-line btn-line-after" href="/doctors-grid">
-                  <span>Contato</span><span className="line"><span></span></span>
-                </Link>
-                <Link className="btn btn--white" href="/page-about">Mais Sobre  </Link>
-              </div>
             </div>
           </div>
         </div>

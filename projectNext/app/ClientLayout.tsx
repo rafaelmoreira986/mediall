@@ -5,6 +5,7 @@ import Preloader from "@/components/layout/Preloader";
 
 import TopBar from "@/components/layout/TopBar";
 import Navbar from "@/components/layout/Navbar";
+import NavbarEs from "@/components/layout/NavbarEs";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/layout/BackToTop";
 import SearchOverlay, { SearchProvider } from "@/components/layout/SearchOverlay";
@@ -16,6 +17,7 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const isComplianceInternal = complianceInternalRoutes.some((route) =>
     pathname.startsWith(route)
   );
+  const isEs = pathname.startsWith("/es");
 
   if (isComplianceInternal) {
     return <>{children}</>;
@@ -28,7 +30,7 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
         <SearchOverlay />
         <header className="header header-light header-topbar" id="navbar-spy">
           <TopBar />
-          <Navbar />
+          {isEs ? <NavbarEs /> : <Navbar />}
         </header>
         {children}
         <Footer />

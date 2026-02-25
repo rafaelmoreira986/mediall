@@ -20,7 +20,8 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/doctor.jpg",
+    img: "/assets/images/mediall/peopleworkshop.jpg",
+    imgPosition: "top",
     title: "Gestão de Pessoas",
     items: [
       "Estratégias integradas de gestão de pessoas, alinhando talentos humanos aos objetivos organizacionais com foco em eficiência, desenvolvimento e bem-estar.",
@@ -46,7 +47,8 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/ps.jpg",
+    img: "/assets/images/mediall/diagnostic.jpg",
+    imgPosition: "top",
     title: "Serviços de Apoio Diagnóstico e Terapêutico",
     items: [
       "Coordenamos todas as atividades operacionais dos serviços de apoio diagnóstico e terapêutico, garantindo eficiência, segurança e excelência no atendimento ao paciente.",
@@ -76,7 +78,7 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/modern-hospital-room.jpg",
+    img: "/assets/images/mediall/pharmacy.jpg",
     title: "Gestão de Farmácia e Suprimentos",
     items: [
       "Gestão estratégica da farmácia hospitalar e da cadeia de suprimentos, assegurando disponibilidade de insumos com eficiência, segurança e controle de custos.",
@@ -98,7 +100,7 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/telemedicina.jpg",
+    img: "/assets/images/mediall/nutrition.jpg",
     title: "Nutrição Hospitalar e Produção de Dietas",
     items: [
       "Gestão do serviço de nutrição e dietética hospitalar, garantindo a produção de dietas seguras, padronizadas e adequadas às necessidades clínicas de cada paciente.",
@@ -124,7 +126,7 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/gestao-hospitalar-plena.jpg",
+    img: "/assets/images/mediall/OIP.webp",
     title: "Gestão de Higienização e Hotelaria Hospitalar",
     items: [
       "Serviços de higienização e hotelaria hospitalar com padrões rigorosos de qualidade, promovendo segurança sanitária, conforto e bem-estar para pacientes e colaboradores.",
@@ -183,7 +185,7 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/meeting.jpg",
+    img: "/assets/images/mediall/telemedicina.jpg",
     title: "Tecnologia em Saúde",
     items: [
       "Soluções tecnológicas inovadoras para transformar digitalmente as instituições de saúde, melhorando processos, a experiência do paciente e os resultados assistenciais.",
@@ -213,7 +215,7 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/telemedicina.jpg",
+    img: "/assets/images/mediall/analyticsHospital.png",
     title: "Gestão de Qualidade Hospitalar",
     items: [
       "Sistemas de gestão da qualidade baseados em evidências e melhores práticas internacionais, com foco na segurança do paciente, excelência assistencial e melhoria contínua.",
@@ -291,7 +293,7 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/doctor.jpg",
+    img: "/assets/images/mediall/handstogether.jpg",
     title: "Programas de Humanização",
     items: [
       "Programas de humanização que colocam o paciente e sua família no centro do cuidado, promovendo um atendimento mais empático, acolhedor e humanizado.",

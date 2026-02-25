@@ -1,9 +1,8 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 import type { ReactNode } from "react";
 
 interface SwiperCarouselProps {
@@ -33,7 +32,7 @@ export default function SwiperCarousel({
 }: SwiperCarouselProps) {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Autoplay]}
+      modules={[Navigation, Autoplay]}
       slidesPerView={1}
       breakpoints={{
         768: { slidesPerView: slidesPerViewMd },

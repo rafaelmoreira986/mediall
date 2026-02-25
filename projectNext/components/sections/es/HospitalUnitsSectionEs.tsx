@@ -35,17 +35,20 @@ export default function HospitalUnitsSectionEs() {
       style={{
         padding: "80px 0",
         position: "relative",
-        backgroundImage: "url('/assets/images/mediall/hospital.png')",
+        backgroundImage: "url('/assets/images/mediall/hospital-modern.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+
       }}
     >
       <div
         style={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "rgba(0, 0, 0, 0.73)",
+          backgroundColor: "rgba(0, 0, 0, 0.55)",
+          backdropFilter: "blur(6px)",
+          WebkitBackdropFilter: "blur(6px)",
           zIndex: 0,
         }}
       />
@@ -68,14 +71,6 @@ export default function HospitalUnitsSectionEs() {
                 Unidades Hospitalarias
               </h2>
             </div>
-            <div
-              style={{
-                width: "50px",
-                height: "3px",
-                backgroundColor: "var(--global--color-secondary)",
-                margin: "0 auto 50px",
-              }}
-            />
           </div>
         </div>
 

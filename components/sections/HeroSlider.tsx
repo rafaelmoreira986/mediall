@@ -3,7 +3,7 @@ import SwiperCarousel from "@/components/ui/SwiperCarousel";
 
 const slides = [
   {
-    bg: "/assets/images/mediall/imagens.jpeg",
+    bg: "/assets/images/mediall/Imagens.jpeg",
     label: "Especialistas em",
     headline: "Gestão em Saúde",
     desc: "",

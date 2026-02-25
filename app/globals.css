@@ -331,6 +331,25 @@ section {
   flex-direction: column;
 }
 
+/* Departments carousel – navigation arrows on mobile */
+@media (max-width: 767px) {
+  .departments-carousel .swiper-button-next,
+  .departments-carousel .swiper-button-prev {
+    display: flex !important;
+    width: 36px;
+    height: 36px;
+    background-color: #00bcd4;
+    border-radius: 50%;
+    top: 40%;
+  }
+  .departments-carousel .swiper-button-next::after,
+  .departments-carousel .swiper-button-prev::after {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
 /* Remove automatic capitalization/uppercase from all elements site-wide.
    Text should appear exactly as written in the source. */
 * {

@@ -22,13 +22,19 @@ export default function DepartmentCard({ department }: DepartmentCardProps) {
             <div className="department-title">
               <h4 style={{ textAlign: "center" }}>{department.title}</h4>
             </div>
-            <ul className="department-list list-unstyled" style={{ flex: 1 }}>
-              {department.items.map((item, i) => (
-                <li key={i} style={{ textAlign: "justify" }}>
-                  <i className="fas fa-check"></i> <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            {department.cardText ? (
+              <p style={{ flex: 1, textAlign: "justify", fontSize: "14px", lineHeight: 1.7, color: "#666", margin: 0 }}>
+                {department.cardText}
+              </p>
+            ) : (
+              <ul className="department-list list-unstyled" style={{ flex: 1 }}>
+                {department.items.map((item, i) => (
+                  <li key={i} style={{ textAlign: "justify" }}>
+                    <i className="fas fa-check"></i> <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
             <div className="department-more" style={{ marginTop: "auto" }}>
               <button
                 onClick={() => setIsModalOpen(true)}

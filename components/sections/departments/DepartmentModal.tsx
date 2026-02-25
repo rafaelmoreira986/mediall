@@ -19,9 +19,11 @@ export default function DepartmentModal({ department, onClose }: DepartmentModal
     };
     document.addEventListener("keydown", handleKeyDown);
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
   }, [onClose]);
 
@@ -48,9 +50,11 @@ export default function DepartmentModal({ department, onClose }: DepartmentModal
         style={{
           position: "relative",
           backgroundColor: "#1a2e44",
-          width: "min(780px, 96vw)",
-          height: "100vh",
+          width: "min(1100px, 96vw)",
+          maxHeight: "90vh",
           overflowY: "auto",
+          overscrollBehavior: "contain",
+          borderRadius: "16px",
           boxShadow: "0 0 100px rgba(0,0,0,0.7)",
           color: "#cdd8e3",
           display: "flex",
@@ -60,7 +64,7 @@ export default function DepartmentModal({ department, onClose }: DepartmentModal
         }}
       >
         {/* Hero image */}
-        <div style={{ position: "relative", width: "100%", height: "42vh", flexShrink: 0 }}>
+        <div style={{ position: "relative", width: "100%", height: "260px", flexShrink: 0, borderRadius: "16px 16px 0 0", overflow: "hidden" }}>
           <img
             src={department.img}
             alt={department.title}
@@ -79,7 +83,7 @@ export default function DepartmentModal({ department, onClose }: DepartmentModal
         <div
           style={{
             position: "absolute",
-            top: "calc(42vh - 22px)",
+            top: "calc(260px - 22px)",
             left: "50%",
             transform: "translateX(-50%)",
             zIndex: 10,

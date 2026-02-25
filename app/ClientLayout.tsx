@@ -1,4 +1,5 @@
 "use client";
+import { Suspense } from "react";
 import { usePathname } from "next/navigation";
 import Preloader from "@/components/layout/Preloader";
 
@@ -9,8 +10,8 @@ import BackToTop from "@/components/layout/BackToTop";
 import SearchOverlay, { SearchProvider } from "@/components/layout/SearchOverlay";
 import "@/app/globals.css";
 
-export default function ClientLayout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
+function LayoutContent({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname() ?? "";
   const complianceInternalRoutes = ["/compliance/nova-denuncia", "/compliance/dashboard"];
   const isComplianceInternal = complianceInternalRoutes.some((route) =>
     pathname.startsWith(route)
@@ -34,5 +35,13 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         <BackToTop />
       </div>
     </SearchProvider>
+  );
+}
+
+export default function ClientLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <Suspense fallback={null}>
+      <LayoutContent>{children}</LayoutContent>
+    </Suspense>
   );
 }

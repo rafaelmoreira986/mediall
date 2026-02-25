@@ -347,10 +347,6 @@ section {
   .departments-carousel .swiper-button-next,
   .departments-carousel .swiper-button-prev {
     display: flex !important;
-    width: 36px;
-    height: 36px;
-    background-color: #00bcd4;
-    border-radius: 50%;
     top: 40%;
   }
   .departments-carousel .swiper-button-next::after,

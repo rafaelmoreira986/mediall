@@ -421,7 +421,7 @@ export default function HospitalUnitsSection() {
             {(() => {
               const total = selected.hospitals.length;
               return (
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", border: "1px solid #1a4a72", borderRadius: "4px", overflow: "hidden" }}>
+                <div className="hospital-list-grid">
                   {selected.hospitals.map((h, i) => {
                     const isLastRow = Math.floor(i / 2) === Math.floor((total - 1) / 2);
                     const isLeftCol = i % 2 === 0;

@@ -57,6 +57,10 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+        <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "0 12px" }}>
+          <Link href="/" title="Português" style={{ fontSize: "22px", lineHeight: 1, opacity: 1, textDecoration: "none" }}>🇧🇷</Link>
+          <Link href="/es" title="Español" style={{ fontSize: "22px", lineHeight: 1, opacity: 0.5, textDecoration: "none" }}>🇪🇸</Link>
+        </div>
       </div>
     </nav>
   );

@@ -58,8 +58,12 @@ export default function NavbarEs() {
           ))}
         </ul>
         <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "0 12px" }}>
-          <Link href="/" title="Português" style={{ fontSize: "24px", lineHeight: 1, opacity: 0.4, textDecoration: "none" }}>🇧🇷</Link>
-          <Link href="/es" title="Español" style={{ fontSize: "24px", lineHeight: 1, opacity: 1, textDecoration: "none" }}>🇪🇸</Link>
+          <Link href="/" title="Português" style={{ textDecoration: "none", opacity: 0.4 }}>
+            <img src="/assets/images/flags/br.svg" alt="Português" style={{ width: "24px", height: "16px", borderRadius: "2px", display: "block" }} />
+          </Link>
+          <Link href="/es" title="Español" style={{ textDecoration: "none", opacity: 1 }}>
+            <img src="/assets/images/flags/es.svg" alt="Español" style={{ width: "24px", height: "16px", borderRadius: "2px", display: "block" }} />
+          </Link>
         </div>
       </div>
     </nav>

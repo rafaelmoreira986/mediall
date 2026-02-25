@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-export default function FeaturesBar() {
+export default function FeaturesBarEs() {
   return (
     <section className="features-bar bg-section" id="featuresBar-1" style={{ backgroundImage: "url(/assets/images/background/pattern-2.jpg)" }}>
       <div className="container">
@@ -11,9 +11,9 @@ export default function FeaturesBar() {
               <div className="feature-content">
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                   <i className="flaticon-022-medical"></i>
-                  <h5 style={{ textAlign: "center" }}>Secretaria geral</h5>
+                  <h5 style={{ textAlign: "center" }}>Secretaría general</h5>
                 </div>
-                <p style={{ textAlign: "justify" }}>Para obter mais informações sobre nossa empresa, entre em contato com a nossa matriz:</p>
+                <p style={{ textAlign: "justify" }}>Para obtener más información sobre nuestra empresa, comuníquese con nuestra sede:</p>
                 <a href="tel:3088-1706" style={{ fontSize: "16px", display: "flex", alignItems: "center", gap: "6px" }}><span className="fas fa-phone-alt" style={{ fontSize: "12px" }}></span>62 3088-1706</a>
               </div>
             </div>
@@ -23,11 +23,11 @@ export default function FeaturesBar() {
               <div className="feature-content">
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                   <i className="flaticon-027-medical-report"></i>
-                  <h5 style={{ textAlign: "center" }}>Gestão de contratos</h5>
+                  <h5 style={{ textAlign: "center" }}>Gestión de contratos</h5>
                 </div>
-                <p style={{ textAlign: "justify" }}>Se você é fornecedor e deseja falar com alguém da Mediall Brasil, entre em contato:</p>
+                <p style={{ textAlign: "justify" }}>Si eres proveedor y deseas hablar con alguien de Mediall Brasil, comunícate:</p>
                 <a href="mailto:analista.contratos@mediallbrasil.med.br" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <span className="fas fa-envelope"></span> Enviar e-mail
+                  <span className="fas fa-envelope"></span> Enviar correo
                 </a>
               </div>
             </div>
@@ -37,14 +37,11 @@ export default function FeaturesBar() {
               <div className="feature-content">
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                   <i className="flaticon-014-uniform"></i>
-                  <h5 style={{ textAlign: "center" }}>Horário de funcionamento</h5>
+                  <h5 style={{ textAlign: "center" }}>Horario de atención</h5>
                 </div>
-                <ul className="list-unstyled" >
-                  <li><span>Segunda - Sexta</span><span>8:00 - 18:00 </span></li>
-                  
-                  <li><span>Sábado - domingo</span><span>fechado</span></li>
-                  
-                  
+                <ul className="list-unstyled">
+                  <li><span>Lunes - Viernes</span><span>8:00 - 18:00</span></li>
+                  <li><span>Sábado - domingo</span><span>cerrado</span></li>
                 </ul>
               </div>
             </div>
@@ -54,9 +51,8 @@ export default function FeaturesBar() {
               <div className="feature-content">
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                   <i className="flaticon-042-clinic"></i>
-                  <h5 style={{ textAlign: "center" }}>Localização</h5>
+                  <h5 style={{ textAlign: "center" }}>Ubicación</h5>
                 </div>
-                
                 <div className="map-img">
                   <a href="https://maps.app.goo.gl/zU9i1neku9UdjVXt9" target="_blank" rel="noopener noreferrer">
                     <iframe
@@ -70,9 +66,9 @@ export default function FeaturesBar() {
                     ></iframe>
                   </a>
                 </div>
-                 <a href="https://maps.app.goo.gl/zU9i1neku9UdjVXt9" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "8px", color: "inherit", textDecoration: "none" }}>
-                   <span className="fas fa-map-marker-alt"></span> Localização
-                 </a>
+                <a href="https://maps.app.goo.gl/zU9i1neku9UdjVXt9" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "8px", color: "inherit", textDecoration: "none" }}>
+                  <span className="fas fa-map-marker-alt"></span> Ubicación
+                </a>
               </div>
             </div>
           </div>
@@ -80,22 +76,21 @@ export default function FeaturesBar() {
         <div className="heading heading-15">
           <div className="row justify-content-center">
             <div className="col-12 col-lg-8">
-              <h2 className="heading-title" style={{ textAlign: "center" }}>Mediall Brasil onde gestão e cuidado caminham juntos</h2>
-              <h3 className="paragraph" style={{ textAlign: "center" }}>Desde 2017, a Mediall Brasil vem protagonizando a transformação da gestão
-em saúde no país, com atuação consolidada em 13 estados e no Distrito
-Federal, totalizando mais de 52 unidades sob sua administração. </h3>
-              <p className="heading-desc text--just">A Mediall Brasil é uma empresa especializada em gestão hospitalar e
-administração de unidades de saúde públicas e privadas desde 2017. 
-Surgiu com foco na organização de equipes, otimização de processos e
-eficiência assistencial. Ao longo do tempo, ampliou sua atuação para um
-modelo de gestão integrada, incorporando governança corporativa e
-soluções estratégicas voltadas à qualidade e sustentabilidade
-operacional</p>
+              <h2 className="heading-title" style={{ textAlign: "center" }}>Mediall Brasil donde la gestión y el cuidado van de la mano</h2>
+              <h3 className="paragraph" style={{ textAlign: "center" }}>Desde 2017, Mediall Brasil ha liderado la transformación de la gestión
+en salud en el país, con presencia consolidada en 13 estados y el Distrito
+Federal, totalizando más de 52 unidades bajo su administración.</h3>
+              <p className="heading-desc text--just">Mediall Brasil es una empresa especializada en gestión hospitalaria y
+administración de unidades de salud públicas y privadas desde 2017.
+Surgió con enfoque en la organización de equipos, optimización de procesos y
+eficiencia asistencial. Con el tiempo, amplió su actuación hacia un modelo
+de gestión integrada, incorporando gobernanza corporativa y soluciones
+estratégicas orientadas a la calidad y sostenibilidad operacional.</p>
               <div className="actions-holder" style={{ textAlign: "center" }}>
                 <Link className="btn btn--primary btn-line btn-line-after" href="/doctors-grid">
-                  <span>Contato</span><span className="line"><span></span></span>
+                  <span>Contacto</span><span className="line"><span></span></span>
                 </Link>
-                <Link className="btn btn--white" href="/page-about">Mais Sobre  </Link>
+                <Link className="btn btn--white" href="/page-about">Más información</Link>
               </div>
             </div>
           </div>

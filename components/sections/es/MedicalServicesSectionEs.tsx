@@ -3,32 +3,28 @@ import Link from "next/link";
 const services = [
   {
     icon: "flaticon-046-blood-pressure",
-    title: "Negócios em Saúde",
+    title: "Negocios en Salud",
     description:
-      `Desde 2018, a Mediall Brasil apresenta soluções inovadoras aos seus clientes, abrangendo Gerenciamento de Unidades de Saúde, Gestão Médica e Multiassistencial, Monitoramento de Plantão Médico e Consultoria Especializada. Com perspicácia empreendedora, adaptamo-nos às demandas do mercado e criamos produtos sob medida para cada necessidade.`,
+      `Desde 2018, Mediall Brasil presenta soluciones innovadoras a sus clientes, abarcando Gerenciamiento de Unidades de Salud, Gestión Médica y Multiasistencial, Monitoreo de Guardia Médica y Consultoría Especializada. Con perspicacia emprendedora, nos adaptamos a las demandas del mercado y creamos productos a medida para cada necesidad.`,
     link: "/services",
   },
   {
     icon: "flaticon-029-cardiogram-1",
-    title: "Segurança",
+    title: "Seguridad",
     description:
-      `Por meio de uma gestão profissional humanizada, proporcionamos a todos um ambiente seguro e confiável. Nossos olhos estão atentos tanto aos profissionais de saúde, que dedicam o melhor de si, quanto aos pacientes, que demandam gratidão e cuidado. A segurança e a confiança são os pilares que sustentam cada decisão que tomamos.`,
+      `A través de una gestión profesional humanizada, brindamos a todos un ambiente seguro y confiable. Nuestros ojos están atentos tanto a los profesionales de salud, que dan lo mejor de sí, como a los pacientes, que merecen gratitud y cuidado. La seguridad y la confianza son los pilares que sostienen cada decisión que tomamos.`,
     link: "/services",
   },
   {
     icon: "flaticon-018-medical-2",
-    title: "Excelência",
+    title: "Excelencia",
     description:
-      `Durante a pandemia de Covid-19, a Mediall Brasil destacou-se como
-especialista na estruturação e gestão de Centros de Atendimento e
-hospitais de campanha, assumindo a organização de leitos, equipes
-multiprofissionais, fluxos assistenciais e protocolos clínicos em cenários de
-alta complexidade. `,
+      `Durante la pandemia de Covid-19, Mediall Brasil se destacó como especialista en la estructuración y gestión de Centros de Atención y hospitales de campaña, asumiendo la organización de camas, equipos multiprofesionales, flujos asistenciales y protocolos clínicos en escenarios de alta complejidad.`,
     link: "/services",
   },
 ];
 
-export default function MedicalServicesSection() {
+export default function MedicalServicesSectionEs() {
   return (
     <section
       className="services services-2"
@@ -58,10 +54,10 @@ export default function MedicalServicesSection() {
           <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
             <div className="heading heading-7 text--center">
               <p className="heading-subtitle" style={{ color: "#7ecbe6", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: "0.9rem" }}>
-                Mais de 9 anos em Gestão de Negócios em Saúde
+                Más de 9 años en Gestión de Negocios en Salud
               </p>
               <h2 className="heading-title" style={{ color: "#ffffff", fontWeight: 700 }}>
-                Uma história de Compromisso, Cuidados e Desenvolvimento na Saúde
+                Una historia de Compromiso, Cuidado y Desarrollo en la Salud
               </h2>
             </div>
           </div>
@@ -92,7 +88,7 @@ export default function MedicalServicesSection() {
                         <span className="line">
                           <span></span>
                         </span>
-                        <span>Saiba mais</span>
+                        <span>Saber más</span>
                       </Link>
                     </div>
                   </div>

@@ -19,8 +19,7 @@ export default function HomePage() {
       <HeroSlider />
       <FeaturesBar />
       <AboutAvatarsSection />
-      
-      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div className="desktop-spacer" />
       <MedicalServicesSection />
       <DepartmentsSection />
         

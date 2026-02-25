@@ -13,8 +13,7 @@ export default function HomePageEs() {
       <HeroSliderEs />
       <FeaturesBarEs />
       <AboutAvatarsSectionEs />
-
-      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div className="desktop-spacer" />
       <MedicalServicesSectionEs />
       <DepartmentsSectionEs />
 

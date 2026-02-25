@@ -331,6 +331,17 @@ section {
   flex-direction: column;
 }
 
+/* Spacer between AboutAvatars and MedicalServices: visible only on desktop */
+.desktop-spacer {
+  display: none;
+}
+@media (min-width: 768px) {
+  .desktop-spacer {
+    display: block;
+    height: 200px;
+  }
+}
+
 /* Departments carousel – navigation arrows on mobile */
 @media (max-width: 767px) {
   .departments-carousel .swiper-button-next,

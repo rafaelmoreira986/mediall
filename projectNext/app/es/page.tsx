@@ -1,6 +1,5 @@
 import HeroSliderEs from "@/components/sections/es/HeroSliderEs";
 import FeaturesBarEs from "@/components/sections/es/FeaturesBarEs";
-import AboutAvatarsSectionEs from "@/components/sections/es/AboutAvatarsSectionEs";
 import MedicalServicesSectionEs from "@/components/sections/es/MedicalServicesSectionEs";
 import DepartmentsSectionEs from "@/components/sections/es/DepartmentsSectionEs";
 import HospitalUnitsSectionEs from "@/components/sections/es/HospitalUnitsSectionEs";
@@ -12,14 +11,11 @@ export default function HomePageEs() {
     <>
       <HeroSliderEs />
       <FeaturesBarEs />
-      <AboutAvatarsSectionEs />
-      <div className="desktop-spacer" />
+      <MediallStatsSectionEs />
       <MedicalServicesSectionEs />
       <DepartmentsSectionEs />
-
       <HospitalUnitsSectionEs />
       <CtaSectionEs />
-      <MediallStatsSectionEs />
     </>
   );
 }

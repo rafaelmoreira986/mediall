@@ -342,19 +342,17 @@ section {
   }
 }
 
-/* Departments carousel – navigation arrows on mobile */
-@media (max-width: 767px) {
-  .departments-carousel .swiper-button-next,
-  .departments-carousel .swiper-button-prev {
-    display: flex !important;
-    top: 40%;
-  }
-  .departments-carousel .swiper-button-next::after,
-  .departments-carousel .swiper-button-prev::after {
-    font-size: 14px;
-    color: #fff;
-    font-weight: bold;
-  }
+/* Departments carousel – navigation arrows (all breakpoints) */
+.departments-carousel .swiper-button-next,
+.departments-carousel .swiper-button-prev {
+  display: flex !important;
+  top: 40%;
+}
+.departments-carousel .swiper-button-next::after,
+.departments-carousel .swiper-button-prev::after {
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
 }
 
 /* Remove automatic capitalization/uppercase from all elements site-wide.
@@ -370,4 +368,96 @@ section {
 .features-bar-link:hover,
 .features-bar-link:hover span {
   color: #13c5dd !important;
+}
+
+/* Services Mediall – icon centering */
+.services-mediall-icon-circle i::before {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Hero slider – label & headline sizing */
+.hero-label {
+  font-size: 3rem;
+}
+
+.hero-headline {
+  font-size: 4.5rem;
+}
+
+@media (max-width: 767px) {
+  .hero-label {
+    font-size: 1.6rem;
+  }
+  .hero-headline {
+    font-size: 2.4rem;
+  }
+}
+
+/* Services Mediall – responsive layout */
+.services-mediall-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 280px;
+}
+
+@media (max-width: 767px) {
+  .services-mediall-header {
+    grid-template-columns: 1fr;
+  }
+  .services-mediall-header .services-mediall-image {
+    min-height: 220px;
+    order: -1;
+  }
+  .services-mediall-header .services-mediall-text {
+    padding: 40px 24px 32px !important;
+  }
+}
+
+/* Two-column grid used in MedicalServicesSection and HospitalUnitsSection */
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.two-col-grid-dark {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  border: 1px solid #1a4a72;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.two-col-grid-divider {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.two-col-grid-dark .two-col-grid-divider {
+  background: #1a4a72;
+}
+
+@media (max-width: 767px) {
+  .two-col-grid,
+  .two-col-grid-dark {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col-grid .two-col-grid-divider,
+  .two-col-grid-dark .two-col-grid-divider {
+    display: none;
+  }
+
+  /* Reduce row padding on mobile */
+  .two-col-grid-row {
+    padding: 14px 16px !important;
+  }
+
+  /* Smaller icon circles on mobile */
+  .two-col-grid-row .icon-circle {
+    width: 40px !important;
+    height: 40px !important;
+  }
 }

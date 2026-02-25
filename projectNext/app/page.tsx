@@ -18,8 +18,9 @@ export default function HomePage() {
     <>
       <HeroSlider />
       <FeaturesBar />
-      <AboutAvatarsSection />
-      <div className="desktop-spacer" />
+       <MediallStatsSection />
+      {/* <AboutAvatarsSection /> */}
+       
       <MedicalServicesSection />
       <DepartmentsSection />
         
@@ -27,7 +28,7 @@ export default function HomePage() {
       
       <HospitalUnitsSection />
       <CtaSection />
-      <MediallStatsSection />
+     
       {/* <FeaturesSection /> */}
       {/* <TeamCarousel /> */}
       {/* <TestimonialSection />

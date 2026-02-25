@@ -23,21 +23,23 @@ export default function HeroSliderEs() {
                   <div className="row">
                     <div className="col-12">
                       <div style={{ marginTop: "285px", textAlign: "right" }}>
-                        <p style={{
+                        <p className="hero-label" style={{
                           color: "#00bcd4",
-                          fontSize: "3rem",
                           fontWeight: 500,
-                          letterSpacing: "0.05em",
-                          marginBottom: "4px",
+                          letterSpacing: "-0.02em",
+                          wordSpacing: "-0.05em",
+                          margin: 0,
+                          lineHeight: 1.1,
                         }}>{(slide as any).label}</p>
-                        <h1 className="slide-headline" style={{
+                        <h1 className="slide-headline hero-headline" style={{
                           color: "#ffffff",
                           fontWeight: 800,
-                          fontSize: "4.5rem",
                           lineHeight: 1.1,
                           whiteSpace: "pre-line",
                           textAlign: "right",
                           margin: 0,
+                          letterSpacing: "-0.02em",
+                          wordSpacing: "-0.05em",
                         }}>{slide.headline}</h1>
                       </div>
                     </div>

@@ -11,11 +11,8 @@ export default function DepartmentsSectionEs() {
         <div className="row">
           <div className="col-12 col-lg-6 offset-lg-3">
             <div className="heading heading-12 heading-13 text-center">
-              <h2 className="heading-title">Conozca en Detalle Nuestras Asesorías.</h2>
-              <p className="heading-subtitle">
-                Damos una vuelta de 360 grados en la gestión de su hospital, dirigiendo y orientando en
-                todas las áreas hospitalarias
-              </p>
+              <h2 className="heading-title">Nuestros servicios y soluciones</h2>
+
             </div>
           </div>
         </div>
@@ -29,7 +26,7 @@ export default function DepartmentsSectionEs() {
               autoplay
               loop
               spaceBetween={30}
-              speed={3000}
+              speed={800}
               className="departments-carousel"
             >
               {departmentsEs.map((dept, i) => (

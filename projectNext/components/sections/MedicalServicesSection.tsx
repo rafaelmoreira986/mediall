@@ -1,96 +1,239 @@
-import Link from "next/link";
+"use client";
 
 const services = [
   {
-    icon: "flaticon-046-blood-pressure",
-    title: "Negócios em Saúde",
-    description:
-      `Desde 2018, a Mediall Brasil apresenta soluções inovadoras aos seus clientes, abrangendo Gerenciamento de Unidades de Saúde, Gestão Médica e Multiassistencial, Monitoramento de Plantão Médico e Consultoria Especializada. Com perspicácia empreendedora, adaptamo-nos às demandas do mercado e criamos produtos sob medida para cada necessidade.`,
-    link: "/services",
+    icon: "flaticon-030-hospital",
+    title: "Gestão Hospitalar",
+    subtitle: "Unidades Públicas e Privadas",
   },
   {
-    icon: "flaticon-029-cardiogram-1",
-    title: "Segurança",
-    description:
-      `Por meio de uma gestão profissional humanizada, proporcionamos a todos um ambiente seguro e confiável. Nossos olhos estão atentos tanto aos profissionais de saúde, que dedicam o melhor de si, quanto aos pacientes, que demandam gratidão e cuidado. A segurança e a confiança são os pilares que sustentam cada decisão que tomamos.`,
-    link: "/services",
+    icon: "flaticon-039-first-aid-kit",
+    title: "Facilities",
+    subtitle: "Soluções integradas para serviços essenciais",
   },
   {
-    icon: "flaticon-018-medical-2",
-    title: "Excelência",
-    description:
-      `Durante a pandemia de Covid-19, a Mediall Brasil destacou-se como
-especialista na estruturação e gestão de Centros de Atendimento e
-hospitais de campanha, assumindo a organização de leitos, equipes
-multiprofissionais, fluxos assistenciais e protocolos clínicos em cenários de
-alta complexidade. `,
-    link: "/services",
+    icon: "flaticon-014-uniform",
+    title: "Gestão de Pessoas",
+    subtitle: "Gestão Estratégica de Pessoas",
+  },
+  {
+    icon: "flaticon-034-medical-app",
+    title: "Tecnologia em Saúde",
+    subtitle: "Inovação e Soluções Tecnológicas",
+  },
+  {
+    icon: "flaticon-025-examination",
+    title: "Serviços de Apoio Diagnóstico e Terapêutico",
+    subtitle: "Gestão do SADT",
+  },
+  {
+    icon: "flaticon-049-ribbon",
+    title: "Gestão de Qualidade Hospitalar",
+    subtitle: "Excelência, segurança e melhoria contínua",
+  },
+  {
+    icon: "flaticon-032-medicine",
+    title: "Gestão de Farmácia e Suprimentos",
+    subtitle: "Controle de Estoque e Insumos",
+  },
+  {
+    icon: "flaticon-027-medical-report",
+    title: "Assessoria Hospitalar",
+    subtitle: "Estratégia, suporte e alta performance",
+  },
+  {
+    icon: "flaticon-011-nutrition",
+    title: "Nutrição Hospitalar e Produção de Dietas",
+    subtitle: "Dietas Seguras e Padronizadas",
+  },
+  {
+    icon: "flaticon-035-id-card",
+    title: "Pesquisa de Satisfação e Concierge",
+    subtitle: "Experiência e Satisfação do Paciente",
+  },
+  {
+    icon: "flaticon-042-clinic",
+    title: "Gestão de Higienização e Hotelaria Hospitalar",
+    subtitle: "Limpeza e Conforto Hospitalar",
+  },
+  {
+    icon: "flaticon-031-medical-care",
+    title: "Programas de Humanização",
+    subtitle: "Cuidado com Acolhimento",
   },
 ];
+
+const leftCol = services.filter((_, i) => i % 2 === 0);
+const rightCol = services.filter((_, i) => i % 2 === 1);
 
 export default function MedicalServicesSection() {
   return (
     <section
-      className="services services-2"
-      id="services-2"
+      className="services services-mediall"
+      id="services-mediall"
       style={{
         position: "relative",
-        backgroundImage: "url('/assets/images/mediall/hospital.png')",
+        backgroundImage: "url('/assets/images/mediall/hospital-hall.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         marginTop: "5rem",
       }}
     >
+      {/* Dark overlay */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "rgba(0, 6, 14, 0.7)",
+          backgroundColor: "rgba(0, 6, 14, 0.72)",
           zIndex: 0,
         }}
       />
-      <div className="bg-section" style={{ display: "none" }}>
-        <img src="/assets/images/background/pattern.png" alt="background" />
-      </div>
-      <div className="container" style={{ position: "relative", zIndex: 1 }}>
-        <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-            <div className="heading heading-7 text--center">
-              <p className="heading-subtitle" style={{ color: "#7ecbe6", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: "0.9rem" }}>
-                Mais de 9 anos em Gestão de Negócios em Saúde
-              </p>
-              <h2 className="heading-title" style={{ color: "#ffffff", fontWeight: 700 }}>
-                Uma história de Compromisso, Cuidados e Desenvolvimento na Saúde
-              </h2>
+
+      {/* Content */}
+      <div style={{ position: "relative", zIndex: 1, padding: "70px 0 60px" }}>
+        {/* Title */}
+        <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontSize: "clamp(2.4rem, 5vw, 4rem)",
+              fontWeight: 800,
+              color: "#ffffff",
+              marginBottom: "0.75rem",
+              lineHeight: 1.1,
+            }}
+          >
+            Serviços
+          </h2>
+          <p
+            style={{
+              color: "rgba(255,255,255,0.75)",
+              fontSize: "1rem",
+              maxWidth: 520,
+              margin: "0 auto",
+              lineHeight: 1.6,
+            }}
+          >
+            A Mediall Brasil oferece um portfólio completo de serviços
+            especializados, adaptáveis às necessidades de cada unidade
+          </p>
+        </div>
+
+        {/* 2-column × 6-row grid */}
+        <div className="container">
+          <div className="two-col-grid">
+            {/* Left column */}
+            <div>
+              {leftCol.map((service, i) => (
+                <ServiceRow
+                  key={i}
+                  service={service}
+                  isLast={i === leftCol.length - 1}
+                />
+              ))}
+            </div>
+
+            {/* Vertical divider */}
+            <div className="two-col-grid-divider" />
+
+            {/* Right column */}
+            <div>
+              {rightCol.map((service, i) => (
+                <ServiceRow
+                  key={i}
+                  service={service}
+                  isLast={i === rightCol.length - 1}
+                />
+              ))}
             </div>
           </div>
         </div>
-
-        <div className="row" style={{ display: "flex", flexWrap: "wrap" }}>
-          {services.map((service, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-4" style={{ display: "flex" }}>
-              <div className="service-panel service-panel-2" data-hover="" style={{ display: "flex", flexDirection: "column", width: "100%" }}>
-                <div className="service-panel-holder" style={{ display: "flex", flexDirection: "column", flex: 1 }}>
-                  <div className="service-content" style={{ display: "flex", flexDirection: "column", flex: 1 }}>
-                    <div className="service-icon">
-                      <i className={service.icon}></i>
-                    </div>
-                    <div className="service-title" style={{ textAlign: "center" }}>
-                      <h4>
-                        <Link href={service.link}>{service.title}</Link>
-                      </h4>
-                    </div>
-                    <div className="service-desc text--just" style={{ flex: 1 }}>
-                      <p>{service.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
+  );
+}
+
+function ServiceRow({
+  service,
+  isLast,
+}: {
+  service: (typeof services)[0];
+  isLast: boolean;
+}) {
+  return (
+    <div
+      className="two-col-grid-row"
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        gap: "1rem",
+        padding: "18px 28px",
+        borderBottom: isLast ? "none" : "1px solid rgba(255,255,255,0.15)",
+        background: "rgba(255,255,255,0.06)",
+        transition: "background 0.2s",
+        cursor: "default",
+      }}
+      onMouseEnter={(e) => {
+        (e.currentTarget as HTMLDivElement).style.background =
+          "rgba(255,255,255,0.14)";
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLDivElement).style.background =
+          "rgba(255,255,255,0.06)";
+      }}
+    >
+      {/* Icon circle */}
+      <div
+        className="services-mediall-icon-circle icon-circle"
+        style={{
+          flexShrink: 0,
+          width: 52,
+          height: 52,
+          borderRadius: "50%",
+          background: "rgba(43,123,176,0.35)",
+          border: "1px solid rgba(43,123,176,0.5)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <i
+          className={service.icon}
+          style={{
+            fontSize: "1.4rem",
+            color: "#7ecbe6",
+            lineHeight: 1,
+            margin: 0,
+            padding: 0,
+          }}
+        />
+      </div>
+
+      {/* Text */}
+      <div style={{ minWidth: 0 }}>
+        <p
+          style={{
+            fontWeight: 700,
+            color: "#ffffff",
+            fontSize: "0.88rem",
+            margin: 0,
+            lineHeight: 1.3,
+          }}
+        >
+          {service.title}
+        </p>
+        <p
+          style={{
+            color: "rgba(255,255,255,0.6)",
+            fontSize: "0.78rem",
+            margin: "3px 0 0 0",
+            lineHeight: 1.3,
+          }}
+        >
+          {service.subtitle}
+        </p>
+      </div>
+    </div>
   );
 }

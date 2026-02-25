@@ -147,35 +147,35 @@ export default function AboutAvatarsSection() {
         }
       `}</style>
 
-      <section className="about about-4" id="about-4" ref={sectionRef as unknown as React.RefObject<HTMLDivElement>}>
+      <section className="about about-4" id="about-4" ref={sectionRef as unknown as React.RefObject<HTMLDivElement>} style={{ backgroundColor: "#263967" }}>
         <div className="container">
 
           {/* ---- Heading ---- */}
           <div className="heading heading-18">
             <div className="row">
               <div className="col-12 col-lg-5">
-                <p className="heading-subtitle">
+                <p className="heading-subtitle" style={{ color: "#7ecbe6" }}>
                   Saúde de qualidade para quem mais importa!
                 </p>
               </div>
             </div>
             <div className="row">
               <div className="col-12 col-lg-5">
-                <h2 className="heading-title">
+                <h2 className="heading-title" style={{ color: "#ffffff" }}>
                   Cuidando da saúde e do bem-estar de você e de quem você ama.
                 </h2>
               </div>
               <div className="col-12 col-lg-6 offset-lg-1">
-                <p className="paragraph">
+                <p className="paragraph" style={{ color: "#c8d8f0" }}>
                   Oferecemos uma gestão completa de saúde para toda a comunidade, desde consultas de rotina até suporte em situações de urgência e emergência.
                 </p>
-                <p className="heading-desc">
+                <p className="heading-desc" style={{ color: "#a8bcd8" }}>
                   Trabalhamos lado a lado com as equipes de saúde para desenvolver planos de atendimento personalizados, incluindo o acompanhamento de doenças crônicas. Quando necessário, realizamos encaminhamentos e orientamos sobre o profissional mais adequado para cada caso. Todas as demandas são tratadas com respeito, sigilo e comprometimento.
                 </p>
                 <div className="signature-block">
                   <div className="signature-body">
-                    <h6>Mediall Brasil</h6>
-                    <p>Gestão em Saúde</p>
+                    <h6 style={{ color: "#ffffff" }}>Mediall Brasil</h6>
+                    <p style={{ color: "#7ecbe6" }}>Gestão em Saúde</p>
                   </div>
                 </div>
               </div>
@@ -213,11 +213,11 @@ export default function AboutAvatarsSection() {
                 >
                   <div
                     className="avatar avatar-2 bg-section"
-                    style={{ backgroundImage: "url('/assets/images/mediall/meeting.jpg')", position: "relative", overflow: "hidden" }}
+                    style={{ backgroundImage: "url('/assets/images/mediall/doctor-with.jpg')", position: "relative", overflow: "hidden" }}
                   >
-                    <div style={{ position: "absolute", inset: 0, backgroundColor: "#1a2e44", opacity: 0.88 }} />
+                    <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0, 0, 0, 0.61)" }} />
                     <div className="avatar-content" style={{ position: "relative", zIndex: 1 }}>
-                      <p>
+                      <p style={{ color: "#ffffff" }}>
                         Hospitais que funcionam com excelência salvam mais vidas. Transformamos a gestão hospitalar para que cada decisão, processo e recurso esteja a serviço do que mais importa: o cuidado humano.
                       </p>
 

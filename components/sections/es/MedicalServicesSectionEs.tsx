@@ -80,17 +80,6 @@ export default function MedicalServicesSectionEs() {
                     <div className="service-desc text--just" style={{ flex: 1 }}>
                       <p>{service.description}</p>
                     </div>
-                    <div className="service-more">
-                      <Link
-                        className="btn btn--white btn-line btn-line-before btn-line-inversed"
-                        href={service.link}
-                      >
-                        <span className="line">
-                          <span></span>
-                        </span>
-                        <span>Saber más</span>
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </div>

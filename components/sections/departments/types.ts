@@ -5,6 +5,7 @@ export interface ModalSection {
 
 export interface Department {
   img: string;
+  imgPosition?: string;
   title: string;
   items: string[];
   cardText?: string;

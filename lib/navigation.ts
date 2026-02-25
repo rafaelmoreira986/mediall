@@ -5,6 +5,29 @@ export interface NavItem {
   children?: NavItem[];
 }
 
+export const esNavigation: NavItem[] = [
+  {
+    label: "Inicio",
+    href: "/es",
+    id: "home",
+  },
+  {
+    label: "Quiénes Somos",
+    href: "/es/quem-somos",
+    id: "quienes-somos",
+  },
+  {
+    label: "Soluciones/Servicios",
+    href: "#departments-2",
+    id: "soluciones",
+  },
+  {
+    label: "Compliance",
+    href: "/es/compliance",
+    id: "compliance",
+  },
+];
+
 export const mainNavigation: NavItem[] = [
   {
     label: "Home",
@@ -18,22 +41,12 @@ export const mainNavigation: NavItem[] = [
   },
   {
     label: "Soluções/Serviços",
-    href: "/services",
+    href: "#departments-2",
     id: "solucoes",
-  },
-  {
-    label: "Unidades Hospitalares",
-    href: "/page-departments",
-    id: "unidades",
   },
   {
     label: "Compliance",
     href: "/compliance",
     id: "compliance",
-  },
-  {
-    label: "Trabalhe Conosco",
-    href: "/trabalhe-conosco",
-    id: "trabalhe-conosco",
   },
 ];

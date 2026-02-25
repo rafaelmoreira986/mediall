@@ -14,7 +14,7 @@ export default function FeaturesBarEs() {
                   <h5 style={{ textAlign: "center" }}>Secretaría general</h5>
                 </div>
                 <p style={{ textAlign: "justify" }}>Para obtener más información sobre nuestra empresa, comuníquese con nuestra sede:</p>
-                <a href="tel:3088-1706" style={{ fontSize: "16px", display: "flex", alignItems: "center", gap: "6px" }}><span className="fas fa-phone-alt" style={{ fontSize: "12px" }}></span>62 3088-1706</a>
+                <a href="tel:3088-1706" className="features-bar-link" style={{ fontSize: "16px", display: "flex", alignItems: "center", gap: "6px", lineHeight: 1 }}><span className="fas fa-phone-alt" style={{ fontSize: "12px", lineHeight: 1 }}></span>62 3088-1706</a>
               </div>
             </div>
           </div>
@@ -26,8 +26,8 @@ export default function FeaturesBarEs() {
                   <h5 style={{ textAlign: "center" }}>Gestión de contratos</h5>
                 </div>
                 <p style={{ textAlign: "justify" }}>Si eres proveedor y deseas hablar con alguien de Mediall Brasil, comunícate:</p>
-                <a href="mailto:analista.contratos@mediallbrasil.med.br" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <span className="fas fa-envelope"></span> Enviar correo
+                <a href="mailto:analista.contratos@mediallbrasil.med.br" className="features-bar-link" style={{ fontSize: "16px", display: "flex", alignItems: "center", gap: "6px", color: "#fff", lineHeight: 1 }}>
+                  <span className="fas fa-envelope" style={{ fontSize: "12px", lineHeight: 1 }}></span>Enviar correo
                 </a>
               </div>
             </div>
@@ -86,12 +86,6 @@ Surgió con enfoque en la organización de equipos, optimización de procesos y
 eficiencia asistencial. Con el tiempo, amplió su actuación hacia un modelo
 de gestión integrada, incorporando gobernanza corporativa y soluciones
 estratégicas orientadas a la calidad y sostenibilidad operacional.</p>
-              <div className="actions-holder" style={{ textAlign: "center" }}>
-                <Link className="btn btn--primary btn-line btn-line-after" href="/doctors-grid">
-                  <span>Contacto</span><span className="line"><span></span></span>
-                </Link>
-                <Link className="btn btn--white" href="/page-about">Más información</Link>
-              </div>
             </div>
           </div>
         </div>

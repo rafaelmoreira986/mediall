@@ -119,34 +119,34 @@ export default function AboutAvatarsSectionEs() {
         }
       `}</style>
 
-      <section className="about about-4" id="about-4" ref={sectionRef as unknown as React.RefObject<HTMLDivElement>}>
+      <section className="about about-4" id="about-4" ref={sectionRef as unknown as React.RefObject<HTMLDivElement>} style={{ backgroundColor: "#263967" }}>
         <div className="container">
 
           <div className="heading heading-18">
             <div className="row">
               <div className="col-12 col-lg-5">
-                <p className="heading-subtitle">
+                <p className="heading-subtitle" style={{ color: "#7ecbe6" }}>
                   ¡Salud de calidad para quienes más importa!
                 </p>
               </div>
             </div>
             <div className="row">
               <div className="col-12 col-lg-5">
-                <h2 className="heading-title">
+                <h2 className="heading-title" style={{ color: "#ffffff" }}>
                   Cuidando la salud y el bienestar de ti y de quienes amas.
                 </h2>
               </div>
               <div className="col-12 col-lg-6 offset-lg-1">
-                <p className="paragraph">
+                <p className="paragraph" style={{ color: "#c8d8f0" }}>
                   Ofrecemos una gestión completa de salud para toda la comunidad, desde consultas de rutina hasta apoyo en situaciones de urgencia y emergencia.
                 </p>
-                <p className="heading-desc">
+                <p className="heading-desc" style={{ color: "#a8bcd8" }}>
                   Trabajamos lado a lado con los equipos de salud para desarrollar planes de atención personalizados, incluyendo el seguimiento de enfermedades crónicas. Cuando es necesario, realizamos derivaciones y orientamos sobre el profesional más adecuado para cada caso. Todas las necesidades son atendidas con respeto, confidencialidad y compromiso.
                 </p>
                 <div className="signature-block">
                   <div className="signature-body">
-                    <h6>Mediall Brasil</h6>
-                    <p>Gestión en Salud</p>
+                    <h6 style={{ color: "#ffffff" }}>Mediall Brasil</h6>
+                    <p style={{ color: "#7ecbe6" }}>Gestión en Salud</p>
                   </div>
                 </div>
               </div>
@@ -172,11 +172,11 @@ export default function AboutAvatarsSectionEs() {
                 <div className="col-12 col-lg-5" data-wow="fadeIn" data-wow-delay="0.15s">
                   <div
                     className="avatar avatar-2 bg-section"
-                    style={{ backgroundImage: "url('/assets/images/mediall/meeting.jpg')", position: "relative", overflow: "hidden" }}
+                    style={{ backgroundImage: "url('/assets/images/mediall/doctor-with.jpg')", position: "relative", overflow: "hidden" }}
                   >
-                    <div style={{ position: "absolute", inset: 0, backgroundColor: "#1a2e44", opacity: 0.88 }} />
+                    <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0, 0, 0, 0.61)" }} />
                     <div className="avatar-content" style={{ position: "relative", zIndex: 1 }}>
-                      <p>
+                      <p style={{ color: "#ffffff" }}>
                         Los hospitales que funcionan con excelencia salvan más vidas. Transformamos la gestión hospitalaria para que cada decisión, proceso y recurso esté al servicio de lo que más importa: el cuidado humano.
                       </p>
                     </div>

@@ -14,7 +14,7 @@ export default function HeroSliderEs() {
   return (
     <section className="slider slider-2" id="slider-2">
       <div className="container-fluid pr-0 pl-0">
-        <SwiperCarousel navigation autoplay loop speed={800}>
+        <SwiperCarousel autoplay loop speed={800}>
           {slides.map((slide, i) => (
             <div key={i} className="slide bg-overlay bg-overlay-dark-slider bg-section" style={{ backgroundImage: `url(${slide.bg})`, backgroundPosition: "center -5%", position: "relative" }}>
               <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(17, 16, 16, 0.66)", zIndex: 1 }} />
@@ -40,9 +40,6 @@ export default function HeroSliderEs() {
                           margin: 0,
                         }}>{slide.headline}</h1>
                       </div>
-                    </div>
-                    <div className="col-12 col-lg-6">
-                      <p className="slide-desc">{slide.desc}</p>
                     </div>
                   </div>
                 </div>

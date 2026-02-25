@@ -165,26 +165,50 @@ export default function ComplianceLandingPage() {
                 className="actions-holder"
                 style={{
                   display: "flex",
-                  justifyContent: "center",
-                  gap: "20px",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "16px",
                   flexWrap: "wrap",
                 }}
               >
-                <Link
-                  className="btn btn--primary btn-line btn-line-after"
-                  href="/compliance/nova-denuncia"
-                  style={{ fontSize: "16px", padding: "14px 36px", color:"white"}}
+                <div style={{ display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap" }}>
+                  <button
+                    className="btn btn--primary btn-line btn-line-after"
+                    disabled
+                    style={{ fontSize: "16px", padding: "14px 36px", color: "white", opacity: 0.5, cursor: "not-allowed" }}
+                  >
+                    <span>Reportar Ocorrido</span>
+                    <span className="line"><span></span></span>
+                  </button>
+                  <Link
+                    className="btn btn--secondary"
+                    href="/compliance/consultar-protocolo"
+                    style={{ fontSize: "16px", padding: "14px 36px", color: "white" }}
+                  >
+                    Visualizar Protocolo
+                  </Link>
+                </div>
+                <div
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    background: "#fff3cd",
+                    border: "1px solid #ffc107",
+                    borderRadius: "4px",
+                    padding: "10px 20px",
+                    fontSize: "14px",
+                    color: "#856404",
+                    fontFamily: "Roboto, sans-serif",
+                  }}
                 >
-                  <span>Reportar Ocorrido</span>
-                  <span className="line"><span></span></span>
-                </Link>
-                <Link
-                  className="btn btn--secondary"
-                  href="/compliance/consultar-protocolo"
-                  style={{ fontSize: "16px", padding: "14px 36px", color: "white" }}
-                >
-                  Visualizar Protocolo
-                </Link>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                  Canal de denúncias <strong>Em manutenção</strong>. Em breve estará disponível.
+                </div>
               </div>
             </div>
           </div>

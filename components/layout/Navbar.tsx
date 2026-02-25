@@ -42,7 +42,16 @@ export default function Navbar() {
               id={item.id}
               data-hover=""
             >
-              <Link href={item.href} onClick={() => setMobileOpen(false)}>
+              <Link
+                href={item.href}
+                onClick={(e) => {
+                  setMobileOpen(false);
+                  if (item.href.startsWith("#")) {
+                    e.preventDefault();
+                    document.getElementById(item.href.slice(1))?.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 <span>{item.label}</span>
               </Link>
             </li>

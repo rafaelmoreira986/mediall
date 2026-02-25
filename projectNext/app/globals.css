@@ -468,15 +468,6 @@ section {
   background: #1a4a72;
 }
 
-/* Flat 2-col grid for hospital list panel (no divider element needed) */
-.hospital-list-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid #1a4a72;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
 @media (max-width: 767px) {
   .two-col-grid,
   .two-col-grid-dark {
@@ -497,14 +488,5 @@ section {
   .two-col-grid-row .icon-circle {
     width: 40px !important;
     height: 40px !important;
-  }
-
-  /* Hospital list grid: single column on mobile */
-  .hospital-list-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hospital-list-grid > div {
-    border-right: none !important;
   }
 }

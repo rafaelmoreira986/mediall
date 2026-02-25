@@ -38,7 +38,7 @@ export default function HeroSlider() {
               style={{
                 backgroundImage: `url(${isMobile && slide.bgMobile ? slide.bgMobile : slide.bg})`,
                 backgroundSize: isMobile ? "cover" : "cover",
-                backgroundPosition: isMobile ? "center center" : "center 150px",
+                backgroundPosition: isMobile ? "center center" : "center 15px",
                 minHeight: isMobile ? windowHeight : undefined,
                 position: "relative",
               }}

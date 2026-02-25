@@ -376,26 +376,31 @@ section {
   padding: 0 !important;
 }
 
-/* Remove large bottom padding the theme adds to features-bar */
+/* Features bar – restore theme's translateY overlap over the hero */
 .features-bar {
   padding-bottom: 0 !important;
+  overflow: visible !important;
 }
 .features-bar .features-holder {
-  transform: none !important;
-  -webkit-transform: none !important;
-  margin-bottom: 0 !important;
+  position: relative !important;
+  z-index: 55 !important;
+  -webkit-transform: translateY(-90px) !important;
+      -ms-transform: translateY(-90px) !important;
+          transform: translateY(-90px) !important;
+  margin-bottom: -90px !important;
 }
 
-/* Hero slider – background position: top on desktop default, top center on mobile */
-.slider.slider-2 .slide {
-  background-position: center -5%;
+/* Hero slider – background position (override theme's background-position-y: 150px) */
+.slider.slider-2 .slide.bg-overlay-dark-slider {
+  background-position: center 15px !important;
+  background-position-x: center !important;
+  background-position-y: 15px !important;
 }
 
-@media (max-width: 809px) {
-  .slider.slider-2 .slide,
-  .slider.slider-2 .slide.bg-overlay-dark-slider,
-  .bg-overlay-dark-slider.bg-section {
+@media (max-width: 840px) {
+  .slider.slider-2 .slide.bg-overlay-dark-slider {
     background-position: top center !important;
+    background-position-x: center !important;
     background-position-y: 0px !important;
   }
 }

@@ -47,7 +47,7 @@ export const departments: Department[] = [
     },
   },
   {
-    img: "/assets/images/mediall/portfolio.png",
+    img: "/assets/images/mediall/Portfolio.png",
     imgPosition: "top",
     title: "Serviços de Apoio Diagnóstico e Terapêutico",
     items: [

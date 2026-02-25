@@ -112,6 +112,39 @@ export default function AboutAvatarsSection() {
           from { opacity: 0; transform: translateX(80px); }
           to   { opacity: 1; transform: translateX(0); }
         }
+
+        /* ---- Image hover effect (same as teamgrid1) ---- */
+        .about-4 .avatar:not(.avatar-2) {
+          position: relative;
+          overflow: hidden;
+          border-radius: 8px;
+        }
+        .about-4 .avatar:not(.avatar-2)::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.5);
+          content: '';
+          z-index: 1;
+          transition: transform 0.6s;
+          transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -100%, 0);
+          pointer-events: none;
+        }
+        .about-4 .avatar:not(.avatar-2):hover::before {
+          transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 100%, 0);
+        }
+        .about-4 .avatar:not(.avatar-2) img {
+          transition: transform 0.35s;
+          transform: scale3d(1.05, 1.05, 1);
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+        .about-4 .avatar:not(.avatar-2):hover img {
+          transform: scale3d(1, 1, 1);
+        }
       `}</style>
 
       <section className="about about-4" id="about-4" ref={sectionRef as unknown as React.RefObject<HTMLDivElement>}>
@@ -162,11 +195,12 @@ export default function AboutAvatarsSection() {
                   data-wow="fadeInDown"
                   data-wow-delay="0s"
                 >
-                  <div className="avatar avatar-1">
+                  <div className="avatar avatar-1" style={{ overflow: "hidden" }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/assets/images/mediall/consulta-de-doentes-idosos-paciente-idoso-cuidando-idoso.jpg.jpeg"
+                      src="/assets/images/mediall/medical-nurses-working-together-hospital.jpg"
                       alt="Profissional de saúde"
+                      style={{ transform: "scale(1.4)", transformOrigin: "center center", objectFit: "cover" }}
                     />
                   </div>
                 </div>
@@ -223,7 +257,7 @@ export default function AboutAvatarsSection() {
                   <div className="avatar avatar-5">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/assets/images/mediall/modern-hospital-room.jpg"
+                      src="/assets/images/mediall/small-girl-with-mother-reception-desk-hospital-coronavirus-pandemic.jpg"
                       alt="Unidade hospitalar"
                     />
                   </div>
@@ -238,7 +272,7 @@ export default function AboutAvatarsSection() {
                   <div className="avatar avatar-6">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/assets/images/mediall/nurse.jpg"
+                      src="/assets/images/mediall/nurse-listens-doctor-students-hospital-gowns-men-woman-standing-hospital-ward.jpg"
                       alt="Enfermeira Mediall"
                     />
                   </div>

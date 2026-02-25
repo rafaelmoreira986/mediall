@@ -7,6 +7,7 @@ export interface Department {
   img: string;
   title: string;
   items: string[];
+  cardText?: string;
   modalContent?: {
     subtitle: string;
     description: string;

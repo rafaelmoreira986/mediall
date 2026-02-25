@@ -12,10 +12,14 @@ export default function DepartmentsSection() {
           <div className="col-12 col-lg-6 offset-lg-3">
             <div className="heading heading-12 heading-13 text-center">
               <h2 className="heading-title">Conheça em Detalhes Nossas Assessorias.</h2>
-              <p className="heading-subtitle text-">Fazemos um giro de 360 graus na gestão do seu hospital, comandando e orientando em todas as áreas hospitalares</p>
+              <p className="heading-subtitle">
+                Fazemos um giro de 360 graus na gestão do seu hospital, comandando e orientando em
+                todas as áreas hospitalares
+              </p>
             </div>
           </div>
         </div>
+
         <div className="row">
           <div className="col-12">
             <SwiperCarousel
@@ -34,13 +38,6 @@ export default function DepartmentsSection() {
                 </div>
               ))}
             </SwiperCarousel>
-          </div>
-        </div>
-        <div className="departments-action">
-          <div className="row justify-content-center">
-            <div className="col-12 col-lg-8" style={{ textAlign: "center" }}>
-              <p className="text--just">Today hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes for all.</p>
-            </div>
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import HospitalUnitsSection from "@/components/sections/HospitalUnitsSection";
 import DonationsSection from "@/components/sections/DonationsSection";
 import BlogCarousel from "@/components/sections/BlogCarousel";
 import AboutAvatarsSection from "@/components/sections/AboutAvatarsSection";
+import MediallStatsSection from "@/components/sections/MediallStatsSection";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <HeroSlider />
       <FeaturesBar />
       <AboutAvatarsSection />
+      
       <br /><br /><br /><br /><br /><br /><br /><br /><br />
       <MedicalServicesSection />
       <DepartmentsSection />
@@ -26,6 +28,7 @@ export default function HomePage() {
       
       <HospitalUnitsSection />
       <CtaSection />
+      <MediallStatsSection />
       {/* <FeaturesSection /> */}
       {/* <TeamCarousel /> */}
       {/* <TestimonialSection />

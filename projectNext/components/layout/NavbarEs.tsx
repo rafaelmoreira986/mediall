@@ -57,9 +57,9 @@ export default function NavbarEs() {
             </li>
           ))}
         </ul>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "0 12px" }}>
-          <Link href="/" title="Português" style={{ fontSize: "22px", lineHeight: 1, opacity: 0.5, textDecoration: "none" }}>🇧🇷</Link>
-          <Link href="/es" title="Español" style={{ fontSize: "22px", lineHeight: 1, opacity: 1, textDecoration: "none" }}>🇪🇸</Link>
+        <div style={{ display: "flex", alignItems: "center", gap: "6px", padding: "0 12px" }}>
+          <Link href="/" title="Português" style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.05em", color: "#263967", opacity: 0.4, textDecoration: "none", border: "1.5px solid #263967", borderRadius: "3px", padding: "2px 6px" }}>BR</Link>
+          <Link href="/es" title="Español" style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.05em", color: "#263967", opacity: 1, textDecoration: "none", border: "1.5px solid #263967", borderRadius: "3px", padding: "2px 6px" }}>ES</Link>
         </div>
       </div>
     </nav>

@@ -227,105 +227,49 @@ export default function HospitalUnitsSection() {
           </div>
         </div>
 
-        {/* State selector — Serviços-style 2-col grid */}
-        <div
-          className="two-col-grid"
-          style={{ marginBottom: "48px" }}
-        >
-          {/* Left column */}
-          <div>
-            {statesData.filter((_, i) => i % 2 === 0).map((s, i, arr) => {
-              const isActive = activeState === s.state;
-              return (
-                <button
-                  key={s.state}
-                  onClick={() => setActiveState(isActive ? null : s.state)}
-                  className="two-col-grid-row"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    gap: "1rem",
-                    padding: "18px 28px",
-                    width: "100%",
-                    borderBottom: i === arr.length - 1 ? "none" : "1px solid rgba(255,255,255,0.15)",
-                    background: isActive ? "rgba(14,127,192,0.35)" : "rgba(255,255,255,0.06)",
-                    border: "none",
-                    borderBottomWidth: i === arr.length - 1 ? "0" : "1px",
-                    borderBottomStyle: "solid",
-                    borderBottomColor: "rgba(255,255,255,0.15)",
-                    cursor: "pointer",
-                    transition: "background 0.2s",
-                    textAlign: "left",
-                  }}
-                  onMouseEnter={(e) => { if (!isActive) (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,255,255,0.14)"; }}
-                  onMouseLeave={(e) => { if (!isActive) (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,255,255,0.06)"; }}
-                >
-                  <div className="icon-circle" style={{ flexShrink: 0, width: 52, height: 52, borderRadius: "50%", background: isActive ? "rgba(14,127,192,0.6)" : "rgba(43,123,176,0.35)", border: `1px solid ${isActive ? "rgba(126,203,230,0.8)" : "rgba(43,123,176,0.5)"}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <i className="fas fa-map-marker-alt" style={{ fontSize: "1.2rem", color: "#7ecbe6", lineHeight: 1 }} />
-                  </div>
-                  <div style={{ minWidth: 0 }}>
-                    <p style={{ fontWeight: 700, color: "#ffffff", fontSize: "0.95rem", margin: 0, lineHeight: 1.3 }}>
-                      {s.state}
-                    </p>
-                    <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.78rem", margin: "3px 0 0 0", lineHeight: 1.3 }}>
-                      {s.abbr} · {s.hospitals.length} {s.hospitals.length === 1 ? "unidade" : "unidades"}
-                    </p>
-                  </div>
-                  {isActive && (
-                    <i className="fas fa-chevron-right" style={{ marginLeft: "auto", color: "#7ecbe6", fontSize: "0.75rem", flexShrink: 0 }} />
-                  )}
-                </button>
-              );
-            })}
-          </div>
-          {/* Vertical divider */}
-          <div className="two-col-grid-divider" />
-          {/* Right column */}
-          <div>
-            {statesData.filter((_, i) => i % 2 === 1).map((s, i, arr) => {
-              const isActive = activeState === s.state;
-              return (
-                <button
-                  key={s.state}
-                  onClick={() => setActiveState(isActive ? null : s.state)}
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    gap: "1rem",
-                    padding: "18px 28px",
-                    width: "100%",
-                    background: isActive ? "rgba(14,127,192,0.35)" : "rgba(255,255,255,0.06)",
-                    border: "none",
-                    borderBottomWidth: i === arr.length - 1 ? "0" : "1px",
-                    borderBottomStyle: "solid",
-                    borderBottomColor: "rgba(255,255,255,0.15)",
-                    cursor: "pointer",
-                    transition: "background 0.2s",
-                    textAlign: "left",
-                  }}
-                  onMouseEnter={(e) => { if (!isActive) (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,255,255,0.14)"; }}
-                  onMouseLeave={(e) => { if (!isActive) (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,255,255,0.06)"; }}
-                >
-                  <div className="icon-circle" style={{ flexShrink: 0, width: 52, height: 52, borderRadius: "50%", background: isActive ? "rgba(14,127,192,0.6)" : "rgba(43,123,176,0.35)", border: `1px solid ${isActive ? "rgba(126,203,230,0.8)" : "rgba(43,123,176,0.5)"}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <i className="fas fa-map-marker-alt" style={{ fontSize: "1.2rem", color: "#7ecbe6", lineHeight: 1 }} />
-                  </div>
-                  <div style={{ minWidth: 0 }}>
-                    <p style={{ fontWeight: 700, color: "#ffffff", fontSize: "0.95rem", margin: 0, lineHeight: 1.3 }}>
-                      {s.state}
-                    </p>
-                    <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.78rem", margin: "3px 0 0 0", lineHeight: 1.3 }}>
-                      {s.abbr} · {s.hospitals.length} {s.hospitals.length === 1 ? "unidade" : "unidades"}
-                    </p>
-                  </div>
-                  {isActive && (
-                    <i className="fas fa-chevron-right" style={{ marginLeft: "auto", color: "#7ecbe6", fontSize: "0.75rem", flexShrink: 0 }} />
-                  )}
-                </button>
-              );
-            })}
-          </div>
+        {/* State selector — responsive grid: 2 cols desktop, 1 col mobile */}
+        <div className="states-grid" style={{ marginBottom: "48px" }}>
+          {statesData.map((s) => {
+            const isActive = activeState === s.state;
+            return (
+              <button
+                key={s.state}
+                onClick={() => setActiveState(isActive ? null : s.state)}
+                className="states-grid-btn"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: "1rem",
+                  padding: "18px 22px",
+                  width: "100%",
+                  background: isActive ? "rgba(14,127,192,0.35)" : "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                  transition: "background 0.2s",
+                  textAlign: "left",
+                }}
+                onMouseEnter={(e) => { if (!isActive) (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,255,255,0.14)"; }}
+                onMouseLeave={(e) => { if (!isActive) (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,255,255,0.06)"; }}
+              >
+                <div className="icon-circle" style={{ flexShrink: 0, width: 48, height: 48, borderRadius: "50%", background: isActive ? "rgba(14,127,192,0.6)" : "rgba(43,123,176,0.35)", border: `1px solid ${isActive ? "rgba(126,203,230,0.8)" : "rgba(43,123,176,0.5)"}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <i className="fas fa-map-marker-alt" style={{ fontSize: "1.1rem", color: "#7ecbe6", lineHeight: 1 }} />
+                </div>
+                <div style={{ minWidth: 0, flex: 1 }}>
+                  <p style={{ fontWeight: 700, color: "#ffffff", fontSize: "0.95rem", margin: 0, lineHeight: 1.3 }}>
+                    {s.state}
+                  </p>
+                  <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.78rem", margin: "3px 0 0 0", lineHeight: 1.3 }}>
+                    {s.abbr} · {s.hospitals.length} {s.hospitals.length === 1 ? "unidade" : "unidades"}
+                  </p>
+                </div>
+                {isActive && (
+                  <i className="fas fa-chevron-right" style={{ marginLeft: "auto", color: "#7ecbe6", fontSize: "0.75rem", flexShrink: 0 }} />
+                )}
+              </button>
+            );
+          })}
         </div>
 
         {/* Hospital panel */}
@@ -417,29 +361,12 @@ export default function HospitalUnitsSection() {
               </div>
             </div>
 
-            {/* Hospital list — flat 2-col grid (equal column widths, aligned rows) */}
-            {(() => {
-              const total = selected.hospitals.length;
-              return (
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", border: "1px solid #1a4a72", borderRadius: "4px", overflow: "hidden" }}>
-                  {selected.hospitals.map((h, i) => {
-                    const isLastRow = Math.floor(i / 2) === Math.floor((total - 1) / 2);
-                    const isLeftCol = i % 2 === 0;
-                    return (
-                      <div
-                        key={i}
-                        style={{
-                          borderRight: isLeftCol ? "1px solid #1a4a72" : "none",
-                          borderBottom: isLastRow ? "none" : "1px solid #1a4a72",
-                        }}
-                      >
-                        <HospitalRow h={h} isLast={true} activeLabel="Ativo" />
-                      </div>
-                    );
-                  })}
-                </div>
-              );
-            })()}
+            {/* Hospital list — responsive grid: 2 cols desktop, 1 col mobile */}
+            <div className="hospitals-grid">
+              {selected.hospitals.map((h, i) => (
+                <HospitalRow key={i} h={h} isLast={false} activeLabel="Ativo" />
+              ))}
+            </div>
           </div>
         )}
 
@@ -466,6 +393,52 @@ export default function HospitalUnitsSection() {
           from { opacity: 0; transform: translateY(8px); }
           to { opacity: 1; transform: translateY(0); }
         }
+
+        /* State selector grid */
+        .states-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        @media (max-width: 767px) {
+          .states-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        /* Hospital list grid */
+        .hospitals-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          border: 1px solid #1a4a72;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+        .hospitals-grid > * {
+          border-right: 1px solid #1a4a72;
+          border-bottom: 1px solid #1a4a72;
+        }
+        .hospitals-grid > *:nth-child(even) {
+          border-right: none;
+        }
+        .hospitals-grid > *:nth-last-child(1),
+        .hospitals-grid > *:nth-last-child(2):nth-child(odd) {
+          border-bottom: none;
+        }
+        @media (max-width: 767px) {
+          .hospitals-grid {
+            grid-template-columns: 1fr;
+          }
+          .hospitals-grid > * {
+            border-right: none;
+          }
+          .hospitals-grid > *:last-child {
+            border-bottom: none;
+          }
+          .hospitals-grid > *:nth-last-child(2):nth-child(odd) {
+            border-bottom: 1px solid #1a4a72;
+          }
+        }
       `}</style>
     </section>
   );
@@ -473,7 +446,7 @@ export default function HospitalUnitsSection() {
 
 function HospitalRow({
   h,
-  isLast,
+  isLast: _isLast,
   activeLabel,
 }: {
   h: { name: string; acronym: string; city: string; active?: boolean };
@@ -482,16 +455,16 @@ function HospitalRow({
 }) {
   return (
     <div
-      className="two-col-grid-row"
       style={{
         display: "flex",
         alignItems: "center",
         gap: "1rem",
         padding: "16px 22px",
-        borderBottom: isLast ? "none" : "1px solid #1a4a72",
         background: "#0a2340",
         transition: "background 0.2s",
         cursor: "default",
+        height: "100%",
+        boxSizing: "border-box",
       }}
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLDivElement).style.background = "#0d3560";

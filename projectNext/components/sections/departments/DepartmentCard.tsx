@@ -21,7 +21,7 @@ export default function DepartmentCard({ department }: DepartmentCardProps) {
               alt={department.title}
               style={{
                 objectPosition: department.imgPosition ?? "center",
-                objectFit: (department.imgFit as any) ?? undefined,
+                objectFit: department.imgFit,
               }}
             />
           </div>
